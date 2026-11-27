@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!--
+	  默认 entitlements：故意不含任何受限制 capability。
+	  自签名证书 / 个人免费开发者账号的 provisioning profile 不包含这些权限，
+	  若声明了会导致签名失败、真机无法安装。
+
+	  如需真机使用「扫码连接 Wi-Fi」，请：
+	  1) 用付费 Apple Developer 账号在 Certificates, Identifiers & Profiles
+	     为 com.mg.localicard 开启 Hotspot Configuration capability；
+	  2) 把 project.yml 里 CODE_SIGN_ENTITLEMENTS 改成
+	     Support/LeitorQR-Hotspot.entitlements，重新 xcodegen generate。
+
+	  未开启时 App 仍可正常安装运行，Wi-Fi 连接会给出「不支持」提示。
+	-->
+</dict>
+</plist>

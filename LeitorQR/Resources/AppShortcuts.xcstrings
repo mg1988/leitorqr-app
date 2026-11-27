@@ -1,0 +1,76 @@
+{
+  "sourceLanguage" : "pt-BR",
+  "strings" : {
+    "Conectar ao Wi-Fi com ${applicationName}" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "Join Wi-Fi with ${applicationName}",
+              "Connect to Wi-Fi with ${applicationName}"
+            ]
+          }
+        },
+        "ja" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "${applicationName}でWi-Fiに接続"
+            ]
+          }
+        },
+        "zh-Hans" : {
+          "stringSet" : {
+            "state" : "translated",
+            "values" : [
+              "用${applicationName}连接 Wi-Fi",
+              "${applicationName}连 Wi-Fi"
+            ]
+          }
+        }
+      }
+    },
+    "Ler Wi-Fi com ${applicationName}" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringSet" : {
+            "state" : "needs_review",
+            "values" : [
+              "Scan Wi-Fi with ${applicationName}"
+            ]
+          }
+        },
+        "ja" : {
+          "stringSet" : {
+            "state" : "needs_review",
+            "values" : [
+              "${applicationName}でWi-Fiをスキャン"
+            ]
+          }
+        },
+        "pt-BR" : {
+          "stringSet" : {
+            "state" : "new",
+            "values" : [
+              "Ler Wi-Fi com ${applicationName}",
+              "Conectar ao Wi-Fi com ${applicationName}"
+            ]
+          }
+        },
+        "zh-Hans" : {
+          "stringSet" : {
+            "state" : "needs_review",
+            "values" : [
+              "用${applicationName}扫码连 Wi-Fi",
+              "${applicationName}扫 Wi-Fi"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

@@ -1,0 +1,47 @@
+{
+  "identifier": "1A2B3C4D-0000-0000-0000-000000000001",
+  "nonRenewingSubscriptions": [],
+  "products": [
+    {
+      "displayPrice": "9.99",
+      "familyShareable": false,
+      "internalID": "20250010",
+      "localizations": [
+        {
+          "description": "Pagamento único. Acesso Premium para sempre, sem renovação.",
+          "displayName": "Premium Vitalício",
+          "locale": "pt_BR"
+        }
+      ],
+      "productID": "com.mg.localicard.premium.lifetime",
+      "referenceName": "Premium Vitalício",
+      "type": "NonConsumable"
+    },
+    {
+      "displayPrice": "1.99",
+      "familyShareable": false,
+      "internalID": "20250011",
+      "localizations": [
+        {
+          "description": "Acesso Premium por 7 dias. Pagamento único, sem renovação.",
+          "displayName": "Experiência 7 dias",
+          "locale": "pt_BR"
+        }
+      ],
+      "productID": "com.leitorqr.premium.weeklypass",
+      "referenceName": "Experiência 7 dias",
+      "type": "NonConsumable"
+    }
+  ],
+  "settings": {
+    "_failTransactionsEnabled": false,
+    "_locale": "pt_BR",
+    "_storefront": "PRT",
+    "_storeKitErrors": []
+  },
+  "subscriptionGroups": [],
+  "version": {
+    "major": 3,
+    "minor": 0
+  }
+}
