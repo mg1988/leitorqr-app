@@ -66,15 +66,19 @@ struct SubscriptionCenterView: View {
                 .font(Theme.Typography.sectionTitle)
                 .foregroundStyle(Theme.Palette.textPrimary)
 
-            if let price = snapshot.displayPrice,
-               let period = snapshot.periodText {
-                Text("\(price) / \(period)")
-                    .font(Theme.Typography.body)
-                    .foregroundStyle(Theme.Palette.textSecondary)
-            } else if snapshot.displayName != nil {
-                Text(L10n.Subscription.planFree)
-                    .font(Theme.Typography.body)
-                    .foregroundStyle(Theme.Palette.textSecondary)
+            // 买断没有订阅周期（periodText 为 nil），只能显示价格本身。
+            // 旧写法在 periodText 缺失时会掉进 `displayName != nil` 分支，
+            // 给已付费用户显示「免费版」。
+            if let price = snapshot.displayPrice {
+                Group {
+                    if let period = snapshot.periodText {
+                        Text("\(price) / \(period)")
+                    } else {
+                        Text(price)
+                    }
+                }
+                .font(Theme.Typography.body)
+                .foregroundStyle(Theme.Palette.textSecondary)
             }
         }
         .card()

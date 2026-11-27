@@ -266,11 +266,6 @@ enum DebugLaunchOptions {
         return raw == "1"
     }
 
-    /// `LEITORQR_PLAN`：旧的付费墙档位预选。体验卡下架后付费墙只有买断一档，此参数已不再使用。
-    static var forcedPlan: String? {
-        ProcessInfo.processInfo.environment["LEITORQR_PLAN"]?.lowercased()
-    }
-
     /// `LEITORQR_PAYWALL_REASON=scan|limit|feature|onboarding` 指定 DEBUG 付费墙的情境文案，用于截图验收。
     static var paywallReason: String? {
         ProcessInfo.processInfo.environment["LEITORQR_PAYWALL_REASON"]?.lowercased()

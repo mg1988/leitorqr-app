@@ -57634,7 +57634,7 @@
         "ar": {
           "stringUnit": {
             "state": "translated",
-            "value": "برو"
+            "value": "PRO"
           }
         },
         "da": {
@@ -57700,7 +57700,7 @@
         "hi": {
           "stringUnit": {
             "state": "translated",
-            "value": "प्रो"
+            "value": "PRO"
           }
         },
         "id": {
@@ -57724,7 +57724,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "프로"
+            "value": "PRO"
           }
         },
         "ms": {
@@ -57766,7 +57766,7 @@
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "ПРО"
+            "value": "PRO"
           }
         },
         "sv": {
@@ -57778,7 +57778,7 @@
         "th": {
           "stringUnit": {
             "state": "translated",
-            "value": "โปร"
+            "value": "PRO"
           }
         },
         "tr": {
@@ -57796,7 +57796,7 @@
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "CHUYÊN NGHIỆP"
+            "value": "PRO"
           }
         },
         "zh-Hans": {
@@ -61724,19 +61724,19 @@
         "ar": {
           "stringUnit": {
             "state": "translated",
-            "value": "عمر"
+            "value": "مدى الحياة"
           }
         },
         "da": {
           "stringUnit": {
             "state": "translated",
-            "value": "Levetid"
+            "value": "Livstid"
           }
         },
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Lebensdauer"
+            "value": "Lebenslang"
           }
         },
         "en": {
@@ -61754,43 +61754,43 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Toda la vida"
+            "value": "De por vida"
           }
         },
         "es-419": {
           "stringUnit": {
             "state": "translated",
-            "value": "Toda la vida"
+            "value": "De por vida"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Elinikä"
+            "value": "Ikuinen"
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Durée de vie"
+            "value": "À vie"
           }
         },
         "fr-CA": {
           "stringUnit": {
             "state": "translated",
-            "value": "Durée de vie"
+            "value": "À vie"
           }
         },
         "he": {
           "stringUnit": {
             "state": "translated",
-            "value": "כל החיים"
+            "value": "לכל החיים"
           }
         },
         "hi": {
           "stringUnit": {
             "state": "translated",
-            "value": "जीवनकाल"
+            "value": "आजीवन"
           }
         },
         "id": {
@@ -61802,7 +61802,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Durata"
+            "value": "A vita"
           }
         },
         "ja": {
@@ -61814,7 +61814,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "수명"
+            "value": "평생"
           }
         },
         "ms": {
@@ -61826,19 +61826,19 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Levetid"
+            "value": "Livstid"
           }
         },
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Levensduur"
+            "value": "Levenslang"
           }
         },
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Żywotność"
+            "value": "Dożywotni"
           }
         },
         "pt-BR": {
@@ -61856,7 +61856,7 @@
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Срок службы"
+            "value": "Навсегда"
           }
         },
         "sv": {
@@ -61868,7 +61868,7 @@
         "th": {
           "stringUnit": {
             "state": "translated",
-            "value": "อายุการใช้งาน"
+            "value": "ตลอดชีพ"
           }
         },
         "tr": {
@@ -61880,13 +61880,13 @@
         "uk": {
           "stringUnit": {
             "state": "translated",
-            "value": "Термін служби"
+            "value": "Безстроково"
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tuổi thọ"
+            "value": "Trọn đời"
           }
         },
         "zh-Hans": {
@@ -61898,7 +61898,7 @@
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "使用壽命"
+            "value": "終身"
           }
         }
       }
@@ -63428,13 +63428,13 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Prima desbloqueada."
+            "value": "Premium desbloqueado."
           }
         },
         "es-419": {
           "stringUnit": {
             "state": "translated",
-            "value": "Prima desbloqueada."
+            "value": "Premium desbloqueado."
           }
         },
         "fi": {
@@ -63446,13 +63446,13 @@
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Prime débloquée."
+            "value": "Premium débloqué."
           }
         },
         "fr-CA": {
           "stringUnit": {
             "state": "translated",
-            "value": "Prime débloquée."
+            "value": "Premium débloqué."
           }
         },
         "he": {
@@ -63476,7 +63476,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Premio sbloccato."
+            "value": "Premium sbloccato."
           }
         },
         "ja": {
@@ -63524,7 +63524,7 @@
         "pt-PT": {
           "stringUnit": {
             "state": "translated",
-            "value": "Prémio desbloqueado."
+            "value": "Premium desbloqueado."
           }
         },
         "ru": {
@@ -65816,7 +65816,7 @@
         "ar": {
           "stringUnit": {
             "state": "translated",
-            "value": "مقفلة"
+            "value": "مفتوح"
           }
         },
         "da": {
@@ -65876,7 +65876,7 @@
         "he": {
           "stringUnit": {
             "state": "translated",
-            "value": "לא נעול"
+            "value": "פתוח"
           }
         },
         "hi": {
@@ -66002,7 +66002,7 @@
         "ar": {
           "stringUnit": {
             "state": "translated",
-            "value": "قسط"
+            "value": "Premium"
           }
         },
         "da": {
@@ -66050,13 +66050,13 @@
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Prime"
+            "value": "Premium"
           }
         },
         "fr-CA": {
           "stringUnit": {
             "state": "translated",
-            "value": "Prime"
+            "value": "Premium"
           }
         },
         "he": {
@@ -66080,7 +66080,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Premio"
+            "value": "Premium"
           }
         },
         "ja": {
@@ -66110,7 +66110,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Premie"
+            "value": "Premium"
           }
         },
         "pl": {
@@ -66128,7 +66128,7 @@
         "pt-PT": {
           "stringUnit": {
             "state": "translated",
-            "value": "Prémio"
+            "value": "Premium"
           }
         },
         "ru": {
@@ -66164,7 +66164,7 @@
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cao cấp"
+            "value": "Premium"
           }
         },
         "zh-Hans": {
@@ -66188,7 +66188,7 @@
         "ar": {
           "stringUnit": {
             "state": "translated",
-            "value": "غير مقفلة"
+            "value": "مقفل"
           }
         },
         "da": {
@@ -66248,7 +66248,7 @@
         "he": {
           "stringUnit": {
             "state": "translated",
-            "value": "לא נעול"
+            "value": "נעול"
           }
         },
         "hi": {
@@ -73496,7 +73496,7 @@
         "fr-CA": {
           "stringUnit": {
             "state": "translated",
-            "value": "Copier le bouton IBAN"
+            "value": "Copier l'IBAN"
           }
         },
         "he": {
@@ -76508,7 +76508,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "주목할 만한 항목을 찾을 수 없습니다(버튼)."
+            "value": "지적할 사항이 없습니다."
           }
         },
         "ms": {
@@ -97617,19 +97617,19 @@
         "ar": {
           "stringUnit": {
             "state": "translated",
-            "value": "قسط مدى الحياة"
+            "value": "Premium مدى الحياة"
           }
         },
         "da": {
           "stringUnit": {
             "state": "translated",
-            "value": "Lifetime Premium"
+            "value": "Premium på livstid"
           }
         },
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Lifetime Premium"
+            "value": "Premium lebenslang"
           }
         },
         "en": {
@@ -97647,43 +97647,43 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Prima de por vida"
+            "value": "Premium de por vida"
           }
         },
         "es-419": {
           "stringUnit": {
             "state": "translated",
-            "value": "Prima de por vida"
+            "value": "Premium de por vida"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Lifetime Premium"
+            "value": "Premium ikuisesti"
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Prime à vie"
+            "value": "Premium à vie"
           }
         },
         "fr-CA": {
           "stringUnit": {
             "state": "translated",
-            "value": "Prime à vie"
+            "value": "Premium à vie"
           }
         },
         "he": {
           "stringUnit": {
             "state": "translated",
-            "value": "Lifetime Premium"
+            "value": "Premium לכל החיים"
           }
         },
         "hi": {
           "stringUnit": {
             "state": "translated",
-            "value": "आजीवन प्रीमियम"
+            "value": "आजीवन Premium"
           }
         },
         "id": {
@@ -97707,31 +97707,31 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "평생 보험료"
+            "value": "평생 프리미엄"
           }
         },
         "ms": {
           "stringUnit": {
             "state": "translated",
-            "value": "Premium Sepanjang Hayat"
+            "value": "Premium Seumur Hidup"
           }
         },
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Lifetime Premium"
+            "value": "Premium på livstid"
           }
         },
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Levenslange premie"
+            "value": "Premium levenslang"
           }
         },
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dożywotnia premia"
+            "value": "Premium dożywotni"
           }
         },
         "pt-BR": {
@@ -97743,25 +97743,25 @@
         "pt-PT": {
           "stringUnit": {
             "state": "translated",
-            "value": "Prémio vitalício"
+            "value": "Premium vitalício"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Пожизненная премия"
+            "value": "Premium навсегда"
           }
         },
         "sv": {
           "stringUnit": {
             "state": "translated",
-            "value": "Lifetime Premium"
+            "value": "Premium för livet"
           }
         },
         "th": {
           "stringUnit": {
             "state": "translated",
-            "value": "พรีเมี่ยมตลอดชีพ"
+            "value": "Premium ตลอดชีพ"
           }
         },
         "tr": {
@@ -97773,13 +97773,13 @@
         "uk": {
           "stringUnit": {
             "state": "translated",
-            "value": "Довічний преміум"
+            "value": "Premium назавжди"
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Phí bảo hiểm trọn đời"
+            "value": "Premium trọn đời"
           }
         },
         "zh-Hans": {
@@ -97791,7 +97791,7 @@
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "終身保費"
+            "value": "終身 Premium"
           }
         }
       }
@@ -99844,7 +99844,7 @@
         "ar": {
           "stringUnit": {
             "state": "translated",
-            "value": "قسط"
+            "value": "Premium"
           }
         },
         "da": {
@@ -99892,13 +99892,13 @@
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Prime"
+            "value": "Premium"
           }
         },
         "fr-CA": {
           "stringUnit": {
             "state": "translated",
-            "value": "Prime"
+            "value": "Premium"
           }
         },
         "he": {
@@ -99922,7 +99922,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Premio"
+            "value": "Premium"
           }
         },
         "ja": {
@@ -99952,7 +99952,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Premie"
+            "value": "Premium"
           }
         },
         "pl": {
@@ -99970,7 +99970,7 @@
         "pt-PT": {
           "stringUnit": {
             "state": "translated",
-            "value": "Prémio"
+            "value": "Premium"
           }
         },
         "ru": {
@@ -100006,7 +100006,7 @@
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cao cấp"
+            "value": "Premium"
           }
         },
         "zh-Hans": {
@@ -101026,7 +101026,7 @@
         "hi": {
           "stringUnit": {
             "state": "translated",
-            "value": "(बटन) के बारे में"
+            "value": "ऐप के बारे में"
           }
         },
         "id": {
@@ -107284,19 +107284,19 @@
         "ar": {
           "stringUnit": {
             "state": "translated",
-            "value": "عمر"
+            "value": "مدى الحياة"
           }
         },
         "da": {
           "stringUnit": {
             "state": "translated",
-            "value": "Levetid"
+            "value": "Livstid"
           }
         },
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Lebensdauer"
+            "value": "Lebenslang"
           }
         },
         "en": {
@@ -107314,43 +107314,43 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Toda la vida"
+            "value": "De por vida"
           }
         },
         "es-419": {
           "stringUnit": {
             "state": "translated",
-            "value": "Toda la vida"
+            "value": "De por vida"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Elinikä"
+            "value": "Ikuinen"
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Durée de vie"
+            "value": "À vie"
           }
         },
         "fr-CA": {
           "stringUnit": {
             "state": "translated",
-            "value": "Durée de vie"
+            "value": "À vie"
           }
         },
         "he": {
           "stringUnit": {
             "state": "translated",
-            "value": "כל החיים"
+            "value": "לכל החיים"
           }
         },
         "hi": {
           "stringUnit": {
             "state": "translated",
-            "value": "जीवनकाल"
+            "value": "आजीवन"
           }
         },
         "id": {
@@ -107362,7 +107362,7 @@
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Durata"
+            "value": "A vita"
           }
         },
         "ja": {
@@ -107374,7 +107374,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "수명"
+            "value": "평생"
           }
         },
         "ms": {
@@ -107386,19 +107386,19 @@
         "nb": {
           "stringUnit": {
             "state": "translated",
-            "value": "Levetid"
+            "value": "Livstid"
           }
         },
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Levensduur"
+            "value": "Levenslang"
           }
         },
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Żywotność"
+            "value": "Dożywotni"
           }
         },
         "pt-BR": {
@@ -107416,7 +107416,7 @@
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Срок службы"
+            "value": "Навсегда"
           }
         },
         "sv": {
@@ -107428,7 +107428,7 @@
         "th": {
           "stringUnit": {
             "state": "translated",
-            "value": "อายุการใช้งาน"
+            "value": "ตลอดชีพ"
           }
         },
         "tr": {
@@ -107440,13 +107440,13 @@
         "uk": {
           "stringUnit": {
             "state": "translated",
-            "value": "Термін служби"
+            "value": "Безстроково"
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tuổi thọ"
+            "value": "Trọn đời"
           }
         },
         "zh-Hans": {
@@ -107458,7 +107458,7 @@
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "使用壽命"
+            "value": "終身"
           }
         }
       }
@@ -107470,7 +107470,7 @@
         "ar": {
           "stringUnit": {
             "state": "translated",
-            "value": "قسط غير نشط"
+            "value": "Premium غير نشط"
           }
         },
         "da": {
@@ -118119,7 +118119,7 @@
         "hi": {
           "stringUnit": {
             "state": "translated",
-            "value": "आपके पास पहले से ही प्रीमियम (बटन) है"
+            "value": "आपके पास पहले से ही Premium है"
           }
         },
         "id": {
@@ -118143,7 +118143,7 @@
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "이미 Premium을 보유하고 있습니다(버튼)."
+            "value": "이미 Premium을 보유하고 있습니다."
           }
         },
         "ms": {
@@ -118185,7 +118185,7 @@
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "У вас уже есть Премиум"
+            "value": "У вас уже есть Premium"
           }
         },
         "sv": {

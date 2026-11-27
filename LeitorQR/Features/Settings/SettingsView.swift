@@ -377,7 +377,8 @@ private struct MembershipCard: View {
             buyButton(title: buttonTitle)
         }
         .padding(16)
-        .frame(height: 214)
+        // 固定 214 会让长译文顶穿卡片；用最小高度保证视觉基线，内容多时自动长高。
+        .frame(minHeight: 214)
     }
 
     private func titleBlock(subtitle: String) -> some View {
@@ -409,15 +410,17 @@ private struct MembershipCard: View {
     }
 
     private func checkRow(_ title: String) -> some View {
-        HStack(spacing: 6) {
+        HStack(alignment: .firstTextBaseline, spacing: 6) {
             Image(systemName: "checkmark")
                 .font(.system(size: 11, weight: .heavy))
                 .foregroundStyle(Self.checkColor)
+            // 泰语/芬兰语等长译文会超过 220pt，单行会被硬裁（连省略号都没有）；
+            // 允许折到第二行，卡片高度随内容自适应。
             Text(title)
                 .font(.system(size: 12.5, weight: .semibold))
                 .foregroundStyle(Self.titleColor)
-                .lineLimit(1)
-                .minimumScaleFactor(0.8)
+                .lineLimit(2)
+                .fixedSize(horizontal: false, vertical: true)
         }
     }
 

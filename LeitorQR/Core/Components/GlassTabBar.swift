@@ -124,7 +124,9 @@ struct GlassTabBar: View {
             }
             UIImpactFeedbackGenerator(style: .light).impactOccurred(intensity: 0.6)
         } label: {
-            VStack(spacing: 3) {
+            // spacing 4 而不是 3：泰语/印地语的字形上伸部分更高，
+            // 3pt 时文字会贴到图标下沿。
+            VStack(spacing: 4) {
                 tabIcon(for: tab, isSelected: isSelected)
                     .frame(height: 22)
                     .scaleEffect(isSelected ? 1.08 : 1.0)

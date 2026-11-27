@@ -24,6 +24,7 @@ ROOT = Path(__file__).resolve().parent.parent
 XCSTRINGS = ROOT / "LeitorQR" / "Resources" / "Localizable.xcstrings"
 INFO_XCSTRINGS = ROOT / "LeitorQR" / "Resources" / "InfoPlist.xcstrings"
 SHORTCUTS_XCSTRINGS = ROOT / "LeitorQR" / "Resources" / "AppShortcuts.xcstrings"
+SRC = ROOT / "LeitorQR"
 L10N_SWIFT = ROOT / "LeitorQR" / "Core" / "Utilities" / "L10n.swift"
 
 SOURCE_LANGUAGE = "pt-BR"
@@ -651,9 +652,26 @@ def main() -> int:
 
     source = L10N_SWIFT.read_text(encoding="utf-8")
     # L10n.swift 的条目统一走 LanguageManager.localized("key", comment: "...")
+    # 两种取法都要覆盖：
+    #   1) L10n.swift 里的 LanguageManager.localized("key", comment:)
+    #   2) App Intents 的 LocalizedStringResource / IntentDescription / @Parameter(title:)
+    #      这些跟随系统语言，不走 LanguageManager，漏检就会静默不翻。
     used_keys = set(re.findall(r'LanguageManager\.localized\("([^"]+)"', source))
+    intents = "\n".join(
+        p.read_text(encoding="utf-8") for p in SRC.rglob("*.swift")
+    )
+    used_keys |= set(re.findall(
+        r'(?:LocalizedStringResource\s*=\s*|IntentDescription\(|'
+        r'@Parameter\(title:\s*|shortTitle:\s*)"([a-zA-Z][\w.]*)"', intents))
     catalog = json.loads(XCSTRINGS.read_text(encoding="utf-8"))
     strings = catalog.get("strings", {})
+
+    # 兜底：Swift 里任何形如 "namespace.key" 且确实存在于目录的字面量都算引用
+    # （覆盖 `case .x: return "intent.y"` 这类走 switch 的写法）。
+    used_keys |= {
+        m for m in re.findall(r'"([a-z][A-Za-z0-9]*(?:\.[A-Za-z0-9]+)+)"', intents)
+        if m in strings
+    }
 
     missing = sorted(used_keys - set(strings))
     if missing:

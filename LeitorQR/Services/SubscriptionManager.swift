@@ -169,6 +169,17 @@ final class SubscriptionManager: ObservableObject {
         didStart = true
         listenForTransactionUpdates()
         await refresh()
+        #if DEBUG
+        // simctl 不加载 StoreKit 配置，拿不到真实权益；截图验收「已购」态时用假快照垫上。
+        // 放在 refresh 之后，否则会被真实（空）权益覆盖。只影响调试包。
+        if DebugLaunchOptions.forcePremium {
+            var next = SubscriptionSnapshot(state: .lifetime)
+            next.displayName = "Leitor QR Premium"
+            next.displayPrice = "9,99 €"
+            next.willAutoRenew = false
+            snapshot = next
+        }
+        #endif
         hasCompletedInitialRefresh = true
     }
 
