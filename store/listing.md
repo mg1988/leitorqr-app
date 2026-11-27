@@ -1,6 +1,6 @@
 # Leitor QR — 上架材料（巴西 / 葡萄牙主市场）
 
-> 对标对象：**QR Ace: Leitor de QR Code**（id6751625696，NEO PIXEL LABS PTE. LTD）
+> 对标对象：**QR Ace: Leitor de QR Code**（id6751625696，NEO PIXEL LABS PTE. LTD）  
 > 本文件所有字符数已按 App Store Connect 上限核对：名称 30、副标题 30、关键词 100、宣传文本 170、描述 4000。
 
 ---
@@ -9,16 +9,16 @@
 
 数据来自 iTunes Lookup（`country=br`，2026-11-27 抓取）：
 
-| 项目 | QR Ace | 我们 |
-|---|---|---|
-| 名称 | `QR Ace: Leitor de QR Code` | `Leitor QR: Scanner e Gerador` |
-| 商业模式 | 免费 + **自动续期订阅**（周 / 月 / 年） | **一次性买断**，无订阅 |
-| 评分 | 4.82（678 个评分） | 未上架 |
-| 首发 / 更新 | 2025-11-18 / 2026-11-26 | 未上架 |
-| 体积 | 41.1 MB | — |
-| 语言 | 17 种 | **30 种**（含 pt-BR / pt-PT 分开） |
-| 截图 | 7 张，渐变蓝底 + 机型样机 + 白色大标题 | 6 张，纯色底 + 标题（本文件同目录） |
-| 开发者 | 新加坡壳公司（NEO PIXEL LABS） | 独立开发者 |
+| 项目      | QR Ace                      | 我们                             |
+| ------- | --------------------------- | ------------------------------ |
+| 名称      | `QR Ace: Leitor de QR Code` | `Leitor QR: Scanner e Gerador` |
+| 商业模式    | 免费 + **自动续期订阅**（周 / 月 / 年）  | **一次性买断**，无订阅                  |
+| 评分      | 4.82（678 个评分）               | 未上架                            |
+| 首发 / 更新 | 2025-11-18 / 2026-11-26     | 未上架                            |
+| 体积      | 41.1 MB                     | —                              |
+| 语言      | 17 种                        | **30 种**（含 pt-BR / pt-PT 分开）   |
+| 截图      | 7 张，渐变蓝底 + 机型样机 + 白色大标题     | 6 张，纯色底 + 标题（本文件同目录）           |
+| 开发者     | 新加坡壳公司（NEO PIXEL LABS）      | 独立开发者                          |
 
 **他们靠什么拿量：**
 
@@ -63,6 +63,8 @@ Leia, crie e verifique códigos
 ```
 codigo de barras,ean,wifi,historico,offline,importar,foto,privacidade,sem conta,verificar link
 ```
+
+
 
 > 逗号后**不加空格**（空格也算字符）。不重复名称/副标题里已有的 `leitor / qr / scanner / gerador / códigos / leia / crie / verifique`——Apple 对重复词不加权。
 
@@ -148,27 +150,35 @@ One-time purchase, no subscription. No account, no ads. Scan QR and barcodes, ch
 
 ---
 
-## 四、截图（6 张，1320×2868）
+## 四、截图（6 张，1206×2622 · iPhone Pro 6.3 吋）
 
 文件在 `store/screenshots/`，顺序即 App Store 展示顺序。
 
-| # | 文件 | 标题 | 副标题 | 对应界面 |
-|---|---|---|---|---|
-| 1 | `01_risco.png` | Saiba se o link é seguro | Antes de abrir, não depois. | 风险判定结果页（Caution + 三条原因） |
-| 2 | `02_wifi.png` | Wi-Fi com um toque | Sem digitar senha na mão. | Wi-Fi 结果页（SSID / senha / 连接按钮） |
-| 3 | `03_historico.png` | Tudo fica no seu aparelho | Histórico local, sem conta. | 历史页（统计 + 配额 + 记录列表） |
-| 4 | `04_criar.png` | Códigos com a sua cara | Cores, pontos, olhos e logo. | 创建设计页（大码 + 8 款样式） |
-| 5 | `05_tipos.png` | 18 tipos de código | QR, barras, Wi-Fi, contatos e mais. | 创建首页（类型网格） |
-| 6 | `06_idiomas.png` | 30 idiomas, de verdade | Troca na hora, sem reiniciar. | 语言列表（带搜索） |
+| # | 文件                 | 标题                        | 副标题                                 | 对应界面                           |
+| - | ------------------ | ------------------------- | ----------------------------------- | ------------------------------ |
+| 1 | `01_risco.png`     | Saiba se o link é seguro  | Antes de abrir, não depois.         | 风险判定结果页（Caution + 三条原因）        |
+| 2 | `02_wifi.png`      | Wi-Fi com um toque        | Sem digitar senha na mão.           | Wi-Fi 结果页（SSID / senha / 连接按钮） |
+| 3 | `03_historico.png` | Tudo fica no seu aparelho | Histórico local, sem conta.         | 历史页（统计 + 配额 + 记录列表）            |
+| 4 | `04_criar.png`     | Códigos com a sua cara    | Cores, pontos, olhos e logo.        | 创建设计页（大码 + 8 款样式）              |
+| 5 | `05_tipos.png`     | 18 tipos de código        | QR, barras, Wi-Fi, contatos e mais. | 创建首页（类型网格）                     |
+| 6 | `06_idiomas.png`   | 30 idiomas, de verdade    | Troca na hora, sem reiniciar.       | 语言列表（带搜索）                      |
 
 **排序逻辑**：竞品第 1 张是「Escanear」，我们第 1 张是**扫码后的判定结果**——因为模拟器没有摄像头，拍不到真实取景画面，而判定页本身就是我们最独特的界面。接着 Wi-Fi（最具体的使用场景）、历史（隐私主张）、创作、类型、语言。
 
 **重新生成方式**：
 
 ```bash
-# 1) 抓原始界面（6.9" 模拟器）
-./scripts/shot.sh s1_risk --env LEITORQR_OVERLAY_SCREEN=result --env LEITORQR_RESULT_URL="http://192.168.0.1/banco/login"
-# 2) 排版成商店图
+# 0) 用 iPhone 18 Pro（1206×2622）模拟器，并把状态栏统一成 9:41
+xcrun simctl status_bar "iPhone 18 Pro" override --time "9:41" --wifiBars 3 --cellularBars 4 --batteryState charged --batteryLevel 100
+
+# 1) 抓原始界面
+LEITORQR_DEVICE="iPhone 18 Pro" LEITORQR_SHOT_DELAY=13 \
+  SIMCTL_CHILD_LEITORQR_LANGUAGE=pt-BR \
+  SIMCTL_CHILD_LEITORQR_OVERLAY_SCREEN=result \
+  SIMCTL_CHILD_LEITORQR_RESULT_URL="http://192.168.0.1/banco/login" \
+  ./scripts/shot.sh s1_risk
+
+# 2) 排版成商店图（尺寸在 store_shots.py 顶部的 W/H 改）
 python3 scripts/store_shots.py
 ```
 
