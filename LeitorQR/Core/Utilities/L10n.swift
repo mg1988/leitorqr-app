@@ -707,11 +707,11 @@ enum L10n {
         static var contextFeatureSubtitle: String { LanguageManager.localized("paywall.context.feature.subtitle", comment: "Subtítulo funcionalidade bloqueada") }
         static var contextOnboardingTitle: String { LanguageManager.localized("paywall.context.onboarding.title", comment: "Título contextual (após a introdução)") }
         static var contextOnboardingSubtitle: String { LanguageManager.localized("paywall.context.onboarding.subtitle", comment: "Subtítulo contextual (após a introdução)") }
+        static var unlockedTitle: String { LanguageManager.localized("paywall.unlocked.title", comment: "Título quando já é Premium") }
+        static var unlockedContinue: String { LanguageManager.localized("paywall.unlocked.continue", comment: "Botão continuar quando já é Premium") }
         static var templateHint: String { LanguageManager.localized("paywall.template.hint", comment: "Dica dos modelos PRO") }
-        static var ctaWeekly: String { LanguageManager.localized("paywall.cta.weekly", comment: "CTA da experiência de 7 dias") }
         static var planWeekly: String { LanguageManager.localized("paywall.plan.weekly", comment: "Plano de experiência de 7 dias") }
         static var planWeeklyNote: String { LanguageManager.localized("paywall.plan.weekly.note", comment: "Nota do plano de experiência") }
-        static var priceNoteWeekly: String { LanguageManager.localized("paywall.priceNote.weekly", comment: "Nota de preço da experiência (%@)") }
         static var subtitle: String { LanguageManager.localized("paywall.subtitle", comment: "Subtítulo do paywall") }
         static var benefitHistory: String { LanguageManager.localized("paywall.benefit.history", comment: "Histórico ilimitado") }
         static var benefitHistoryDesc: String { LanguageManager.localized("paywall.benefit.history.desc", comment: "Descrição do histórico ilimitado") }
@@ -722,41 +722,24 @@ enum L10n {
         static var benefitPure: String { LanguageManager.localized("paywall.benefit.pure", comment: "Experiência sem anúncios") }
         static var benefitPureDesc: String { LanguageManager.localized("paywall.benefit.pure.desc", comment: "Descrição de experiência pura") }
         static var benefitMore: String { LanguageManager.localized("paywall.benefit.more", comment: "Mais opções de criação") }
-        static var trialBadge: String { LanguageManager.localized("paywall.trial.badge", comment: "Etiqueta de teste grátis (com %@ para o período)") }
         static var proBadge: String { LanguageManager.localized("paywall.badge.pro", comment: "PRO") }
         static var benefitSecurity: String { LanguageManager.localized("paywall.benefit.security", comment: "Histórico e verificação de segurança") }
         static var unlockFeature: String { LanguageManager.localized("paywall.unlockFeature", comment: "Aviso de funcionalidade bloqueada") }
-        static var ctaTrial: String { LanguageManager.localized("paywall.cta.trial", comment: "Começar período experimental") }
-        static var ctaSubscribe: String { LanguageManager.localized("paywall.cta.subscribe", comment: "Subscrever") }
-        static var priceNoteTrial: String { LanguageManager.localized("paywall.priceNote.trial", comment: "Nota de preço com teste") }
-        static var priceNotePlain: String { LanguageManager.localized("paywall.priceNote.plain", comment: "Nota de preço sem teste") }
         static var redeemCode: String { LanguageManager.localized("paywall.redeemCode", comment: "Resgatar Código") }
         static var restoring: String { LanguageManager.localized("paywall.restoring", comment: "A restaurar") }
         static var purchaseFailed: String { LanguageManager.localized("paywall.purchase.failed", comment: "Falha na compra") }
         static var purchasePending: String { LanguageManager.localized("paywall.purchase.pending", comment: "Compra pendente") }
         static var purchaseSuccess: String { LanguageManager.localized("paywall.purchase.success", comment: "Compra concluída") }
-        static var planAnnual: String { LanguageManager.localized("paywall.plan.annual", comment: "Título do plano anual") }
-        static var planMonthly: String { LanguageManager.localized("paywall.plan.monthly", comment: "Plano mensal") }
         static var planLifetime: String { LanguageManager.localized("paywall.plan.lifetime", comment: "Compra única") }
         static var planBestValue: String { LanguageManager.localized("paywall.plan.bestValue", comment: "Melhor valor") }
         static var planLifetimeNote: String { LanguageManager.localized("paywall.plan.lifetime.note", comment: "Pague uma vez, use para sempre") }
-        static var planAutoRenew: String { LanguageManager.localized("paywall.plan.autoRenew", comment: "Renovação automática") }
         static var ctaBuy: String { LanguageManager.localized("paywall.cta.buy", comment: "Comprar") }
         static var priceNoteLifetime: String { LanguageManager.localized("paywall.priceNote.lifetime", comment: "Nota de preço da compra única") }
         static var priceNotePending: String { LanguageManager.localized("paywall.priceNote.pending", comment: "Nota de preço quando o produto ainda não carregou") }
         static var perMonth: String { LanguageManager.localized("paywall.perMonth", comment: "Equivalente mensal") }
         static var perYearUnit: String { LanguageManager.localized("paywall.per.year", comment: "Unidade após o preço: / ano") }
         static var perMonthUnit: String { LanguageManager.localized("paywall.per.month", comment: "Unidade após o preço: / mês") }
-        static var priceNoteMonthly: String { LanguageManager.localized("paywall.priceNote.monthly", comment: "Nota de preço do plano mensal") }
-        static var priceNoteMonthlyTrial: String { LanguageManager.localized("paywall.priceNote.monthlyTrial", comment: "Nota de preço do plano mensal com teste") }
         static var planPopular: String { LanguageManager.localized("paywall.plan.popular", comment: "Etiqueta Mais Popular") }
-        static var timelineTitle: String { LanguageManager.localized("paywall.timeline.title", comment: "Título do fluxo de teste") }
-        static var timelineStep1Title: String { LanguageManager.localized("paywall.timeline.step1.title", comment: "Passo 1 do teste") }
-        static var timelineStep1Desc: String { LanguageManager.localized("paywall.timeline.step1.desc", comment: "Descrição do passo 1") }
-        static var timelineStep2Title: String { LanguageManager.localized("paywall.timeline.step2.title", comment: "Passo 2 do teste") }
-        static var timelineStep2Desc: String { LanguageManager.localized("paywall.timeline.step2.desc", comment: "Descrição do passo 2") }
-        static var timelineStep3Title: String { LanguageManager.localized("paywall.timeline.step3.title", comment: "Passo 3 do teste") }
-        static var timelineStep3Desc: String { LanguageManager.localized("paywall.timeline.step3.desc", comment: "Descrição do passo 3") }
     }
 
     enum Period {

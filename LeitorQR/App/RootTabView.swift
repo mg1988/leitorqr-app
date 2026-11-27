@@ -151,10 +151,6 @@ struct RootTabView: View {
             #endif
             paywallTrigger.markSubscriptionRefreshCompleted(isPremium: subscriptions.isPremium)
         }
-        // 引导后的付费墙已经弹出，订阅状态这时才确认是会员：直接收起，不记冷却。
-        .onChange(of: subscriptions.isPremium) { _, premium in
-            if premium, launchOverlay == .paywall { dismissLaunchOverlay() }
-        }
         .modifier(DebugLaunchModifier())
         #if DEBUG
         .fullScreenCover(isPresented: $showLanguagePicker) {
@@ -170,6 +166,10 @@ struct RootTabView: View {
             }
         }
         #endif
+        // App 内选了阿拉伯语 / 希伯来语：整页镜像；日期、数字按所选语言格式化。
+        // 二维码、条形码图片本身不会被镜像（Image 默认不随书写方向翻转）。
+        .environment(\.layoutDirection, language.layoutDirection)
+        .environment(\.locale, language.locale)
         // 语言切换后重建整棵视图树：L10n 是计算属性，重建时全部重新读取新 Bundle。
         .id(language.revision)
     }
@@ -187,7 +187,9 @@ struct RootTabView: View {
     ///
     /// 11-27 修：上一版要求订阅状态先刷新完才弹——真机上商品 / 权益请求要几秒，
     /// 用户在引导里点「跳过」往往比它快，结果首次安装一次付费墙都看不到。
-    /// 现在不等：状态还没回来也先弹；回来发现其实是会员（重装后恢复买断），自动收起（见 body 里的 onChange）。
+    /// 现在不等：状态还没回来也先弹；回来发现其实是会员（重装后恢复买断 / 测试环境里买过），
+    /// 付费墙原地变成「已解锁」状态，由用户点「继续」离开——不再自己跳走（11-27 用户反馈：
+    /// 「啥也没干就跳到首页」就是之前的自动收起）。
     private func finishOnboarding() {
         UserDefaults.standard.set(true, forKey: OnboardingView.completedKey)
         selectedTab = .scan

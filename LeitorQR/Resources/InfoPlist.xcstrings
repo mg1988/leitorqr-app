@@ -28,6 +28,162 @@
             "state": "translated",
             "value": "Leitor QR"
           }
+        },
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR"
+          }
+        },
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR"
+          }
+        },
+        "fr-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR"
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR"
+          }
         }
       }
     },
@@ -58,6 +214,162 @@
             "state": "translated",
             "value": "LeitorQR"
           }
+        },
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LeitorQR"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LeitorQR"
+          }
+        },
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LeitorQR"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LeitorQR"
+          }
+        },
+        "fr-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LeitorQR"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LeitorQR"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LeitorQR"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LeitorQR"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LeitorQR"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LeitorQR"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LeitorQR"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LeitorQR"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LeitorQR"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LeitorQR"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LeitorQR"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LeitorQR"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LeitorQR"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LeitorQR"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LeitorQR"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LeitorQR"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LeitorQR"
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LeitorQR"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LeitorQR"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LeitorQR"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LeitorQR"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LeitorQR"
+          }
         }
       }
     },
@@ -67,7 +379,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "请允许访问摄像头以扫描二维码。"
+            "value": "Leitor QR 需要使用相机来扫描二维码和条形码。"
           }
         },
         "pt-BR": {
@@ -79,13 +391,169 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Allow camera access to scan QR codes."
+            "value": "Leitor QR uses the camera to scan QR codes and barcodes."
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "QRコードを読み取るためにカメラへのアクセスを許可してください。"
+            "value": "QRコードやバーコードを読み取るために、カメラを使用します。"
+          }
+        },
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR uses the camera to scan QR codes and barcodes."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR usa la cámara para escanear códigos QR y códigos de barras."
+          }
+        },
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR usa la cámara para escanear códigos QR y códigos de barras."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR utilise l'appareil photo pour scanner les codes QR et les codes-barres."
+          }
+        },
+        "fr-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR utilise la caméra pour scanner les codes QR et les codes-barres."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR nutzt die Kamera zum Scannen von QR-Codes und Barcodes."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR utilizza la fotocamera per scansionare codici QR e codici a barre."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR utiliza a câmara para digitalizar códigos QR e códigos de barras."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR gebruikt de camera om QR-codes en barcodes te scannen."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR wykorzystuje kamerę do skanowania kodów QR i kreskowych."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR använder kameran för att skanna QR-koder och streckkoder."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR bruger kameraet til at scanne QR-koder og stregkoder."
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR bruker kameraet til å skanne QR-koder og strekkoder."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR käyttää kameraa QR-koodien ja viivakoodien skannaamiseen."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR использует камеру для сканирования QR-кодов и штрих-кодов."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR використовує камеру для сканування QR-кодів і штрих-кодів."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR, QR kodlarını ve barkodları taramak için kamerayı kullanır."
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يستخدم Leitor QR الكاميرا لمسح رموز QR والرموز الشريطية."
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR משתמש במצלמה כדי לסרוק קודי QR וברקודים."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR QR कोड और बारकोड को स्कैन करने के लिए कैमरे का उपयोग करता है।"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR menggunakan kamera untuk memindai kode QR dan barcode."
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR menggunakan kamera untuk mengimbas kod QR dan kod bar."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR sử dụng camera để quét mã QR và mã vạch."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR ใช้กล้องเพื่อสแกนรหัส QR และบาร์โค้ด"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR는 카메라를 사용하여 QR 코드와 바코드를 스캔합니다."
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR使用相機掃描二維碼和條碼。"
           }
         }
       }
@@ -96,25 +564,181 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "将你创建的二维码保存到相册。"
+            "value": "把你生成的二维码存储到照片。"
           }
         },
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
-            "value": "Salve os códigos QR que você criar na sua galeria de fotos."
+            "value": "Salve em Fotos os códigos QR que você criar."
           }
         },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Save the QR codes you create to your photo library."
+            "value": "Leitor QR saves the codes you create to Photos."
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "作成したQRコードを写真ライブラリに保存します。"
+            "value": "作成したQRコードを写真に保存するために使用します。"
+          }
+        },
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR saves the codes you create to Photos."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR guarda los códigos que crea en Fotos."
+          }
+        },
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR guarda los códigos que crea en Fotos."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR enregistre les codes que vous créez dans Photos."
+          }
+        },
+        "fr-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR enregistre les codes que vous créez dans Photos."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR speichert die von Ihnen erstellten Codes in Fotos."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR salva i codici creati in Foto."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR guarda os códigos que cria em Fotografias."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR slaat de codes die u maakt op in Foto's."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR zapisuje utworzone kody w Zdjęciach."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR sparar koderna du skapar i Foton."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR gemmer de koder, du opretter, i Fotos."
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR lagrer kodene du oppretter i Bilder."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR tallentaa luomasi koodit Kuviin."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR сохраняет созданные вами коды в фотографиях."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR зберігає створені вами коди у Photos."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR, oluşturduğunuz kodları Fotoğraflar'a kaydeder."
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يحفظ Leitor QR الرموز التي تقوم بإنشائها في الصور."
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR שומר את הקודים שאתה יוצר בתמונות."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR आपके द्वारा बनाए गए कोड को फ़ोटो में सहेजता है।"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR menyimpan kode yang Anda buat ke Foto."
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR menyimpan kod yang anda buat ke Photos."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR lưu mã bạn tạo vào Ảnh."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR บันทึกรหัสที่คุณสร้างลงใน Photos"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR는 생성한 코드를 포토에 저장합니다."
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR 將您建立的程式碼儲存到照片中。"
           }
         }
       }
@@ -126,25 +750,181 @@
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
-            "value": "Permita o acesso aos contactos para guardar os dados lidos de um código QR."
+            "value": "Permita o acesso aos Contatos para salvar os dados de contato lidos em um código QR."
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "允许访问通讯录，以便把二维码里的联系人信息保存下来。"
+            "value": "允许访问通讯录，才能把二维码中的联系人信息存入通讯录。"
           }
         },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Allow access to Contacts so contact details read from a QR code can be saved."
+            "value": "Leitor QR uses Contacts to save contact details from codes you scan."
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "QR コードから読み取った連絡先を保存するため、連絡先へのアクセスを許可してください。"
+            "value": "QRコードから読み取った連絡先を保存するために、連絡先へのアクセスを使用します。"
+          }
+        },
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR uses Contacts to save contact details from codes you scan."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR usa Contactos para guardar los detalles de contacto de los códigos que escanea."
+          }
+        },
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR usa Contactos para guardar los detalles de contacto de los códigos que escanea."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR utilise les contacts pour enregistrer les détails des contacts des codes que vous numérisez."
+          }
+        },
+        "fr-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR utilise les contacts pour enregistrer les détails des contacts des codes que vous numérisez."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR verwendet Kontakte, um Kontaktdaten aus den von Ihnen gescannten Codes zu speichern."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR utilizza Contatti per salvare i dettagli dei contatti dai codici scansionati."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR utiliza Contactos para guardar os dados de contacto dos códigos que digitaliza."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR gebruikt Contacten om contactgegevens op te slaan van codes die u scant."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR wykorzystuje Kontakty do zapisywania danych kontaktowych ze skanowanych kodów."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR använder Kontakter för att spara kontaktinformation från koder du skannar."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR bruger Kontakter til at gemme kontaktoplysninger fra koder, du scanner."
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR bruker Kontakter til å lagre kontaktdetaljer fra koder du skanner."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR käyttää Yhteystiedot tallentaakseen yhteystiedot skannaamistasi koodeista."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR использует Контакты для сохранения контактной информации из сканируемых вами кодов."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR використовує Контакти, щоб зберігати контактні дані зі сканованих кодів."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR, taradığınız kodlardaki kişi ayrıntılarını kaydetmek için Kişiler'i kullanır."
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يستخدم Leitor QR جهات الاتصال لحفظ تفاصيل الاتصال من الرموز التي تقوم بمسحها ضوئيًا."
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR משתמש באנשי קשר כדי לשמור פרטי איש קשר מקודים שאתה סורק."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR आपके द्वारा स्कैन किए गए कोड से संपर्क विवरण सहेजने के लिए संपर्कों का उपयोग करता है।"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR menggunakan Kontak untuk menyimpan rincian kontak dari kode yang Anda pindai."
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR menggunakan Kenalan untuk menyimpan butiran kenalan daripada kod yang anda imbas."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR sử dụng Danh bạ để lưu chi tiết liên hệ từ các mã bạn quét."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR ใช้ผู้ติดต่อเพื่อบันทึกรายละเอียดผู้ติดต่อจากรหัสที่คุณสแกน"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR는 연락처를 사용하여 스캔한 코드의 연락처 세부 정보를 저장합니다."
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR 使用聯絡人來儲存您掃描的程式碼中的聯絡人。"
           }
         }
       }
@@ -156,25 +936,181 @@
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
-            "value": "Permita o acesso ao calendário para adicionar eventos lidos de um código QR."
+            "value": "Permita o acesso ao Calendário para adicionar eventos lidos em um código QR."
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "允许写入日历，以便把二维码里的事件添加为日程。"
+            "value": "允许写入日历，才能把二维码中的日程添加到日历。"
           }
         },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Allow writing to Calendar so events read from a QR code can be added."
+            "value": "Leitor QR adds events from codes you scan to your calendar."
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "QR コードから読み取った予定を追加するため、カレンダーへの書き込みを許可してください。"
+            "value": "QRコードから読み取った予定を追加するために、カレンダーへの書き込みを使用します。"
+          }
+        },
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR adds events from codes you scan to your calendar."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR agrega eventos de códigos que escanea a su calendario."
+          }
+        },
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR agrega eventos de códigos que escanea a su calendario."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR ajoute les événements des codes que vous numérisez à votre calendrier."
+          }
+        },
+        "fr-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR ajoute les événements des codes que vous numérisez à votre calendrier."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR fügt Ereignisse aus von Ihnen gescannten Codes zu Ihrem Kalender hinzu."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR aggiunge eventi dai codici scansionati al tuo calendario."
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR adiciona eventos de códigos que digitaliza ao seu calendário."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR voegt gebeurtenissen uit codes die u scant toe aan uw agenda."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR dodaje wydarzenia z zeskanowanych kodów do Twojego kalendarza."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR lägger till händelser från koder du skannar i din kalender."
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR tilføjer begivenheder fra koder, du scanner, til din kalender."
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR legger til hendelser fra koder du skanner til kalenderen din."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR lisää tapahtumia skannaamistasi koodeista kalenteriisi."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR добавляет события из кодов, которые вы сканируете, в ваш календарь."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR додає події зі сканованих вами кодів у ваш календар."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR, taradığınız kodlardaki etkinlikleri takviminize ekler."
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يضيف Leitor QR الأحداث من الرموز التي تقوم بمسحها ضوئيًا إلى التقويم الخاص بك."
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR מוסיף אירועים מקודים שאתה סורק ליומן שלך."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR आपके द्वारा स्कैन किए गए कोड से ईवेंट को आपके कैलेंडर में जोड़ता है।"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR menambahkan acara dari kode yang Anda pindai ke kalender Anda."
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR menambah acara daripada kod yang anda imbas ke kalendar anda."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR thêm các sự kiện từ mã bạn quét vào lịch của mình."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR เพิ่มกิจกรรมจากรหัสที่คุณสแกนลงในปฏิทินของคุณ"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR는 스캔한 코드의 이벤트를 캘린더에 추가합니다."
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leitor QR 將您掃描的程式碼中的事件新增至行事曆。"
           }
         }
       }

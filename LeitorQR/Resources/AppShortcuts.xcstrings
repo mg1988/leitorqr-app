@@ -1,76 +1,375 @@
 {
-  "sourceLanguage" : "pt-BR",
-  "strings" : {
-    "Conectar ao Wi-Fi com ${applicationName}" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringSet" : {
-            "state" : "translated",
-            "values" : [
-              "Join Wi-Fi with ${applicationName}",
-              "Connect to Wi-Fi with ${applicationName}"
-            ]
+  "sourceLanguage": "pt-BR",
+  "strings": {
+    "Conectar ao Wi-Fi com ${applicationName}": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Join Wi-Fi with ${applicationName}"
           }
         },
-        "ja" : {
-          "stringSet" : {
-            "state" : "translated",
-            "values" : [
-              "${applicationName}でWi-Fiに接続"
-            ]
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "${applicationName}でWi-Fiに接続"
           }
         },
-        "zh-Hans" : {
-          "stringSet" : {
-            "state" : "translated",
-            "values" : [
-              "用${applicationName}连接 Wi-Fi",
-              "${applicationName}连 Wi-Fi"
-            ]
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conectar ao Wi-Fi com ${applicationName}"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用 ${applicationName} 连接 Wi-Fi"
+          }
+        },
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Join Wi-Fi with ${applicationName}"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Únase a Wi-Fi con ${applicationName}"
+          }
+        },
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Únase a Wi-Fi con ${applicationName}"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rejoignez le Wi-Fi avec ${applicationName}"
+          }
+        },
+        "fr-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Joignez-vous au Wi-Fi avec ${applicationName}"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verbinden Sie sich mit ${applicationName} mit WLAN"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Accedi al Wi-Fi con ${applicationName}"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ligue-se ao Wi-Fi com ${applicationName}"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sluit u aan bij Wi-Fi met ${applicationName}"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dołącz do sieci Wi-Fi za pomocą ${applicationName}"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gå med i Wi-Fi med ${applicationName}"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tilslut Wi-Fi med ${applicationName}"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bli med Wi-Fi med ${applicationName}"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liity Wi-Fi-verkkoon ${applicationName}:n kanssa"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Подключитесь к Wi-Fi с помощью ${applicationName}"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Приєднайтеся до Wi-Fi за допомогою ${applicationName}"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "${applicationName} ile Wi-Fi'ye katılın"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "انضم إلى شبكة Wi-Fi مع ${applicationName}"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "הצטרף ל-Wi-Fi עם ${applicationName}"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "${applicationName} के साथ वाई-फाई से जुड़ें"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bergabunglah dengan Wi-Fi dengan ${applicationName}"
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sertai Wi-Fi dengan ${applicationName}"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tham gia Wi-Fi với ${applicationName}"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เข้าร่วม Wi-Fi กับ ${applicationName}"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "${applicationName}로 Wi-Fi에 연결"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "使用 ${applicationName} 加入 Wi-Fi"
           }
         }
       }
     },
-    "Ler Wi-Fi com ${applicationName}" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringSet" : {
-            "state" : "needs_review",
-            "values" : [
-              "Scan Wi-Fi with ${applicationName}"
-            ]
+    "Ler Wi-Fi com ${applicationName}": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Scan Wi-Fi with ${applicationName}"
           }
         },
-        "ja" : {
-          "stringSet" : {
-            "state" : "needs_review",
-            "values" : [
-              "${applicationName}でWi-Fiをスキャン"
-            ]
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "${applicationName}でWi-Fiを読み取る"
           }
         },
-        "pt-BR" : {
-          "stringSet" : {
-            "state" : "new",
-            "values" : [
-              "Ler Wi-Fi com ${applicationName}",
-              "Conectar ao Wi-Fi com ${applicationName}"
-            ]
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ler Wi-Fi com ${applicationName}"
           }
         },
-        "zh-Hans" : {
-          "stringSet" : {
-            "state" : "needs_review",
-            "values" : [
-              "用${applicationName}扫码连 Wi-Fi",
-              "${applicationName}扫 Wi-Fi"
-            ]
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用 ${applicationName} 扫描 Wi-Fi"
+          }
+        },
+        "en-GB": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Scan Wi-Fi with ${applicationName}"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Escanear Wi-Fi con ${applicationName}"
+          }
+        },
+        "es-419": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Escanear Wi-Fi con ${applicationName}"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Scanner le Wi-Fi avec ${applicationName}"
+          }
+        },
+        "fr-CA": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Scanner le Wi-Fi avec ${applicationName}"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Scannen Sie WLAN mit ${applicationName}"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Scansione Wi-Fi con ${applicationName}"
+          }
+        },
+        "pt-PT": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Digitalize Wi-Fi com ${applicationName}"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wi-Fi scannen met ${applicationName}"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Przeskanuj Wi-Fi za pomocą ${applicationName}"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Skanna Wi-Fi med ${applicationName}"
+          }
+        },
+        "da": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Scan Wi-Fi med ${applicationName}"
+          }
+        },
+        "nb": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Skann Wi-Fi med ${applicationName}"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Skannaa Wi-Fi:llä ${applicationName}"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Сканирование Wi-Fi с помощью ${applicationName}"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Сканувати Wi-Fi за допомогою ${applicationName}"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "${applicationName} ile Wi-Fi'yi tarayın"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "قم بمسح شبكة Wi-Fi باستخدام ${applicationName}"
+          }
+        },
+        "he": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "סרוק Wi-Fi עם ${applicationName}"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "${applicationName} के साथ वाई-फाई स्कैन करें"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pindai Wi-Fi dengan ${applicationName}"
+          }
+        },
+        "ms": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Imbas Wi-Fi dengan ${applicationName}"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quét Wi-Fi bằng ${applicationName}"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "สแกน Wi-Fi ด้วย ${applicationName}"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "${applicationName}로 Wi-Fi 검색"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "使用${applicationName}掃描Wi-Fi"
           }
         }
       }
     }
   },
-  "version" : "1.0"
+  "version": "1.0"
 }

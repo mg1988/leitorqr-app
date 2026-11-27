@@ -1,6 +1,6 @@
 import SwiftUI
 
-/// App 内语言选择页。首发四市场：巴西、中国、美国、日本。
+/// App 内语言选择页（30 种语言 / 地区，语言名用各自的文字书写）。
 /// 选中立即生效，`LanguageManager.revision` 变化会让根视图重建，
 /// 所有 `L10n` 计算属性随即读取新 Bundle，全文瞬间切换。
 struct LanguageSelectionView: View {
@@ -37,9 +37,11 @@ struct LanguageSelectionView: View {
                                 Text(item.nativeName)
                                     .font(Theme.Typography.body)
                                     .foregroundStyle(Theme.Palette.textPrimary)
-                                Text(item.detail)
-                                    .font(Theme.Typography.caption)
-                                    .foregroundStyle(Theme.Palette.textSecondary)
+                                if !item.detail.isEmpty {
+                                    Text(item.detail)
+                                        .font(Theme.Typography.caption)
+                                        .foregroundStyle(Theme.Palette.textSecondary)
+                                }
                             }
 
                             Spacer()

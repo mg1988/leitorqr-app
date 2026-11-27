@@ -71,18 +71,38 @@ struct PaywallView: View {
 
             Spacer(minLength: Theme.Spacing.m)
 
-            offerCard
-                .entrance(3, appeared: appeared, reduceMotion: reduceMotion)
+            // 已经是会员（重装后恢复了买断、测试环境里买过）：原地换成「已解锁」，由用户点「继续」离开，
+            // 不自动关闭、不显示购买按钮。
+            Group {
+                if showsUnlocked {
+                    unlockedCard
+                        .transition(.opacity.combined(with: .scale(scale: 0.96)))
+                } else {
+                    offerCard
+                        .transition(.opacity)
+                }
+            }
+            .entrance(3, appeared: appeared, reduceMotion: reduceMotion)
 
-            bottomBar
-                .padding(.top, Theme.Spacing.m)
-                .entrance(4, appeared: appeared, reduceMotion: reduceMotion)
+            Group {
+                if showsUnlocked {
+                    unlockedBar
+                        .transition(.opacity)
+                } else {
+                    bottomBar
+                        .transition(.opacity)
+                }
+            }
+            .padding(.top, Theme.Spacing.m)
+            .entrance(4, appeared: appeared, reduceMotion: reduceMotion)
         }
         .padding(.horizontal, Theme.Spacing.pageMargin)
         .padding(.bottom, Theme.Spacing.xs)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background { backdrop }
         .navigationBarHidden(true)
+        .animation(Theme.Motion.resolve(Theme.Motion.smooth, reduceMotion: reduceMotion), value: showsUnlocked)
+        .sensoryFeedback(.success, trigger: showsUnlocked) { old, new in !old && new }
         .sensoryFeedback(.success, trigger: subscriptions.purchaseState) { _, new in new == .success }
         .onAppear {
             guard !appeared else { return }
@@ -321,6 +341,68 @@ struct PaywallView: View {
         )
         .shadow(color: Color.black.opacity(0.05), radius: 12, y: 4)
         .accessibilityElement(children: .combine)
+    }
+
+    // MARK: - 已解锁
+
+    /// 刚买完时 purchaseState == .success，页面马上就会关掉，不用切成「已解锁」再闪一下。
+    private var showsUnlocked: Bool {
+        subscriptions.isPremium && subscriptions.purchaseState != .success
+    }
+
+    private var unlockedCard: some View {
+        HStack(spacing: 12) {
+            Image(systemName: "checkmark.seal.fill")
+                .font(.system(size: 18, weight: .bold))
+                .foregroundStyle(.white)
+                .frame(width: 40, height: 40)
+                .background(
+                    Theme.Palette.success,
+                    in: RoundedRectangle(cornerRadius: 12, style: .continuous)
+                )
+
+            VStack(alignment: .leading, spacing: 3) {
+                Text(L10n.Paywall.unlockedTitle)
+                    .font(.system(size: 16, weight: .semibold))
+                    .foregroundStyle(Theme.Palette.textPrimary)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.8)
+                Text(subscriptions.snapshot.isLifetime ? L10n.Settings.cardLifetimeDetail : subscriptions.snapshot.statusText)
+                    .font(.system(size: 12))
+                    .foregroundStyle(Theme.Palette.textSecondary)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.85)
+            }
+
+            Spacer(minLength: 0)
+        }
+        .padding(.horizontal, Theme.Spacing.m)
+        .padding(.vertical, 14)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(
+            Theme.Palette.surface,
+            in: RoundedRectangle(cornerRadius: Theme.Radius.card, style: .continuous)
+        )
+        .overlay(
+            RoundedRectangle(cornerRadius: Theme.Radius.card, style: .continuous)
+                .strokeBorder(Theme.Palette.success.opacity(0.45), lineWidth: 1.5)
+        )
+        .accessibilityElement(children: .combine)
+    }
+
+    private var unlockedBar: some View {
+        VStack(spacing: 10) {
+            Button {
+                close(purchased: true)
+            } label: {
+                Text(L10n.Paywall.unlockedContinue)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.8)
+            }
+            .buttonStyle(PrimaryButtonStyle())
+
+            legalFooter
+        }
     }
 
     // MARK: - 底部：CTA + 价格披露 + 法律链接

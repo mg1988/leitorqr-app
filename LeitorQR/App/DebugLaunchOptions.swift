@@ -17,17 +17,11 @@ enum DebugLaunchOptions {
         ProcessInfo.processInfo.environment["LEITORQR_START_TAB"]
     }
 
-    /// `LEITORQR_LANGUAGE=en|ja|pt-BR|zh-Hans` 启动时直接切换语言，供四语言截图验收。
+    /// `LEITORQR_LANGUAGE=<.lproj 代码>`（如 en、de、es-419、zh-Hant、ar） 启动时直接切换语言，供四语言截图验收。
     /// 环境变量用语言/地区码（与 .lproj 同名），这里映射到 AppLanguage 的 rawValue。
     static var language: AppLanguage? {
         guard let raw = ProcessInfo.processInfo.environment["LEITORQR_LANGUAGE"] else { return nil }
-        switch raw.lowercased() {
-        case "en": return .english
-        case "ja": return .japanese
-        case "pt-br", "pt-pt": return .ptBR
-        case "zh-hans", "zh": return .zhHans
-        default: return AppLanguage(rawValue: raw)
-        }
+        return AppLanguage(rawValue: raw) ?? AppLanguage.matching(lproj: raw)
     }
 
     static var overlayScreen: String? {

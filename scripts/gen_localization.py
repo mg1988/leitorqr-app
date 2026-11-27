@@ -23,10 +23,16 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 XCSTRINGS = ROOT / "LeitorQR" / "Resources" / "Localizable.xcstrings"
 INFO_XCSTRINGS = ROOT / "LeitorQR" / "Resources" / "InfoPlist.xcstrings"
+SHORTCUTS_XCSTRINGS = ROOT / "LeitorQR" / "Resources" / "AppShortcuts.xcstrings"
 L10N_SWIFT = ROOT / "LeitorQR" / "Core" / "Utilities" / "L10n.swift"
 
 SOURCE_LANGUAGE = "pt-BR"
-LANGUAGES = ("pt-BR", "zh-Hans", "en", "ja")
+# 与 LanguageManager.AppLanguage 一一对应：App 内可切换的全部语言，每个都必须有译文。
+LANGUAGES = (
+    "pt-BR", "en", "en-GB", "es", "es-419", "fr", "fr-CA", "de", "it", "pt-PT",
+    "nl", "pl", "sv", "da", "nb", "fi", "ru", "uk", "tr", "ar", "he", "hi",
+    "id", "ms", "vi", "th", "ko", "ja", "zh-Hans", "zh-Hant",
+)
 
 # key -> 欧洲葡萄牙语文案
 PT_STRINGS: dict[str, str] = {
@@ -638,7 +644,7 @@ def write_json(path: Path, payload: dict) -> None:
 
 def main() -> int:
     """只读校验；任何缺失都以非零退出码报出。"""
-    for path in (XCSTRINGS, INFO_XCSTRINGS, L10N_SWIFT):
+    for path in (XCSTRINGS, INFO_XCSTRINGS, SHORTCUTS_XCSTRINGS, L10N_SWIFT):
         if not path.exists():
             print(f"找不到 {path}", file=sys.stderr)
             return 1
@@ -689,8 +695,19 @@ def main() -> int:
         print(f"权限文案缺少译文：{', '.join(info_incomplete)}", file=sys.stderr)
         return 1
 
+    sc = json.loads(SHORTCUTS_XCSTRINGS.read_text(encoding="utf-8"))
+    sc_incomplete = [
+        f"{key} [{language}]"
+        for key, entry in sorted(sc.get("strings", {}).items())
+        for language in LANGUAGES
+        if not translated(entry, language)
+    ]
+    if sc_incomplete:
+        print(f"App Shortcuts 缺少译文：{', '.join(sc_incomplete)}", file=sys.stderr)
+        return 1
+
     print(f"校验通过：{len(used_keys)} 个 L10n key × {len(LANGUAGES)} 语言齐全；"
-          f"InfoPlist 权限文案齐全。")
+          f"InfoPlist 权限文案与 App Shortcuts 齐全。")
     return 0
 
 

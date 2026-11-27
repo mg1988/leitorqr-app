@@ -2,6 +2,11 @@ import AppKit
 import CoreGraphics
 import Foundation
 
+// OBSOLETE-2026-11-27：这个脚本画的是旧图标（纯白陶瓷）。现在的图标是「墨黑三眼 + 薄荷绿点」，
+// PNG 直接放在 Assets.xcassets 里。为防止误跑覆盖新图标，这里直接退出。
+FileHandle.standardError.write("gen script obsolete since 2026-11-27, new art lives in Assets.xcassets\n".data(using: .utf8)!)
+exit(1)
+
 /// Leitor QR App Icon Generator (Core Graphics, 1024×1024, sRGB, no alpha channel).
 ///
 /// Final Design:「方案 B · 纯白陶瓷 (Ceramic Studio White)」
