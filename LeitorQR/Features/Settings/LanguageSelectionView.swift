@@ -8,10 +8,26 @@ struct LanguageSelectionView: View {
     @ObservedObject private var language = LanguageManager.shared
     @Environment(\.dismiss) private var dismiss
 
+    /// 搜索词：可输入语言自称、地区、英文名或语言代码（如「español」「japan」「zh-Hant」）。
+    @State private var query: String = {
+        #if DEBUG
+        return DebugLaunchOptions.languageSearchQuery
+        #else
+        return ""
+        #endif
+    }()
+
+    private var results: [AppLanguage] {
+        let needle = query.trimmedForSearch
+        guard !needle.isEmpty else { return AppLanguage.allCases }
+        return AppLanguage.allCases.filter { $0.searchHaystack.contains(needle) }
+    }
+
     var body: some View {
         List {
-            Section {
-                ForEach(AppLanguage.allCases) { item in
+            if !results.isEmpty {
+                Section {
+                    ForEach(results) { item in
                     Button {
                         guard item != language.current else {
                             dismiss()
@@ -52,17 +68,49 @@ struct LanguageSelectionView: View {
                     .accessibilityLabel(item.nativeName)
                     .accessibilityAddTraits(item == language.current ? [.isSelected] : [])
                 }
-            } header: {
-                Text(L10n.Language.section)
-            } footer: {
-                Text(L10n.Language.footer)
+                } header: {
+                    Text(L10n.Language.section)
+                } footer: {
+                    Text(L10n.Language.footer)
+                }
             }
         }
         .listStyle(.insetGrouped)
         .scrollContentBackground(.hidden)
+        .overlay {
+            if results.isEmpty {
+                ContentUnavailableView
+                    .search(text: query)
+            }
+        }
         .screenBackground()
         .navigationTitle(L10n.Settings.language)
         .navigationBarTitleDisplayMode(.inline)
+        .searchable(
+            text: $query,
+            placement: .navigationBarDrawer(displayMode: .always),
+            prompt: Text(L10n.Language.search)
+        )
+        .autocorrectionDisabled()
+        .textInputAutocapitalization(.never)
+    }
+}
+
+// MARK: - 搜索词归一化
+
+private extension String {
+    /// 搜索比较前统一：去空白、忽略大小写 / 变音符号 / 全半角。
+    /// 「espanol」也能搜到「Español」，「繁體」也能搜到「繁體中文」。
+    var trimmedForSearch: String {
+        trimmingCharacters(in: .whitespacesAndNewlines)
+            .folding(options: [.caseInsensitive, .diacriticInsensitive, .widthInsensitive], locale: nil)
+    }
+}
+
+private extension AppLanguage {
+    /// 一条语言在搜索里能命中的全部文字：自称 + 地区 + 英文名与语言代码。
+    var searchHaystack: String {
+        "\(nativeName) \(detail) \(searchKeywords)".trimmedForSearch
     }
 }
 

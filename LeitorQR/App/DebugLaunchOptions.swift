@@ -66,6 +66,11 @@ enum DebugLaunchOptions {
         ProcessInfo.processInfo.environment["LEITORQR_OPEN_LANGUAGE"] == "1"
     }
 
+    /// `LEITORQR_LANGUAGE_QUERY=chi` 预填语言选择页的搜索词，用于截图验收筛选结果。
+    static var languageSearchQuery: String {
+        ProcessInfo.processInfo.environment["LEITORQR_LANGUAGE_QUERY"] ?? ""
+    }
+
     /// 插入一条示例历史，仅用于截图与验收。
     static var seedHistory: Bool {
         ProcessInfo.processInfo.environment["LEITORQR_SEED_HISTORY"] == "1"

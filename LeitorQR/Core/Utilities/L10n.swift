@@ -654,6 +654,7 @@ enum L10n {
     enum Language {
         static var section: String { LanguageManager.localized("language.section", comment: "Idioma da aplicação") }
         static var footer: String { LanguageManager.localized("language.footer", comment: "A alteração é aplicada imediatamente em todo o aplicativo.") }
+        static var search: String { LanguageManager.localized("language.search", comment: "Campo de pesquisa na lista de idiomas") }
     }
 
     enum Pro {

@@ -1,5 +1,6 @@
 import Foundation
 import SwiftUI
+import UIKit
 
 /// App 内语言选择（11-27：全球上架，30 种语言 / 地区）。
 /// - `.system` 跟随系统语言（由系统按 `CFBundleLocalizations` 选择最匹配的 .lproj）；
@@ -117,6 +118,44 @@ enum AppLanguage: String, CaseIterable, Identifiable {
         }
     }
 
+    /// 搜索用关键字：英文名 + 地区 + 语言代码。
+    /// `nativeName` 与 `detail` 由调用方另行拼接，所以这里不重复。
+    var searchKeywords: String {
+        switch self {
+        case .system: return "system automatic auto"
+        case .english: return "english us united states en"
+        case .englishUK: return "english uk united kingdom british en-GB"
+        case .spanish: return "spanish españa spain es"
+        case .spanishLatinAmerica: return "spanish latin america méxico latinoamérica es-419"
+        case .french: return "french france fr"
+        case .frenchCanada: return "french canada québec fr-CA"
+        case .german: return "german germany deutschland de"
+        case .italian: return "italian italy italia it"
+        case .ptBR: return "portuguese brazil brasil pt-BR"
+        case .portuguesePortugal: return "portuguese portugal pt-PT"
+        case .dutch: return "dutch netherlands nederland holland nl"
+        case .polish: return "polish poland polska pl"
+        case .swedish: return "swedish sweden sverige sv"
+        case .danish: return "danish denmark danmark da"
+        case .norwegian: return "norwegian norway norge nb bokmål"
+        case .finnish: return "finnish finland suomi fi"
+        case .russian: return "russian russia ru"
+        case .ukrainian: return "ukrainian ukraine uk"
+        case .turkish: return "turkish turkey türkiye tr"
+        case .arabic: return "arabic ar"
+        case .hebrew: return "hebrew israel he"
+        case .hindi: return "hindi india भारत hi"
+        case .indonesian: return "indonesian indonesia id"
+        case .malay: return "malay malaysia ms"
+        case .vietnamese: return "vietnamese vietnam việt nam vi"
+        case .thai: return "thai thailand ประเทศไทย th"
+        case .korean: return "korean korea south 대한민국 ko"
+        case .japanese: return "japanese japan 日本 ja"
+        case .zhHans: return "chinese simplified china 简体 大陆 zh-Hans"
+        case .chineseTraditional: return "chinese traditional 繁體 中國台灣 zh-Hant"
+        }
+    }
+
     /// 副标题：地区（用该语言书写，空字符串 = 不显示）。跟随系统时显示系统实际选中的语言。
     var detail: String {
         switch self {
@@ -150,7 +189,7 @@ enum AppLanguage: String, CaseIterable, Identifiable {
         case .korean: return "대한민국"
         case .japanese: return "日本"
         case .zhHans: return "中国大陆"
-        case .chineseTraditional: return "台灣"
+        case .chineseTraditional: return "中國台灣"
         }
     }
 
@@ -225,6 +264,15 @@ final class LanguageManager: ObservableObject {
     private init() {
         let raw = UserDefaults.standard.string(forKey: "com.leitorqr.appLanguage")
         self.current = raw.flatMap(AppLanguage.init(rawValue:)) ?? .system
+        Self.syncSearchBarDirection(isRightToLeft: effective.isRightToLeft)
+    }
+
+    /// `.searchable` 的输入框是 UIKit 的 `UISearchBar`，只认 `semanticContentAttribute`，
+    /// 不跟随 SwiftUI 的 `\.layoutDirection`。App 内切到阿拉伯语 / 希伯来语时必须手动同步，
+    /// 否则放大镜和输入方向还是从左往右，和整页右对齐的布局打架。
+    private static func syncSearchBarDirection(isRightToLeft: Bool) {
+        UISearchBar.appearance().semanticContentAttribute =
+            isRightToLeft ? .forceRightToLeft : .forceLeftToRight
     }
 
     /// 跟随系统时，系统实际为本 App 选中的语言（按 CFBundleLocalizations + 用户的系统语言顺序）。
@@ -269,6 +317,7 @@ final class LanguageManager: ObservableObject {
         guard language != current else { return }
         current = language
         UserDefaults.standard.set(language.rawValue, forKey: storageKey)
+        Self.syncSearchBarDirection(isRightToLeft: effective.isRightToLeft)
         revision += 1
     }
 
