@@ -38333,19 +38333,19 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Unbegrenzten Verlauf freischalten"
+            "value": "Verlauf freischalten"
           }
         },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Unlock Unlimited History"
+            "value": "Unlock Unlimited"
           }
         },
         "en-GB": {
           "stringUnit": {
             "state": "translated",
-            "value": "Unlock Unlimited History"
+            "value": "Unlock Unlimited"
           }
         },
         "es": {
@@ -38363,7 +38363,7 @@
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Avaa rajaton historia"
+            "value": "Avaa rajaton"
           }
         },
         "fr": {
@@ -38441,7 +38441,7 @@
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
-            "value": "Desbloquear histórico ilimitado"
+            "value": "Desbloquear ilimitado"
           }
         },
         "pt-PT": {
@@ -38453,7 +38453,7 @@
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Откройте безлимитную историю"
+            "value": "Открыть безлимит"
           }
         },
         "sv": {

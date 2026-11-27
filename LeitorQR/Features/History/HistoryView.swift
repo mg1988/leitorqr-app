@@ -916,7 +916,11 @@ private struct HistoryHeroCard: View {
                         .font(.subheadline.weight(.semibold))
                         .lineLimit(1)
                         .minimumScaleFactor(0.8)
+                        // iOS 26 的玻璃按钮不自带固有宽度，放到 HStack 里会被配额条挤扁成
+                        // 「Desbloquear histórico il…」。这里锁死按钮的横向尺寸，让进度条让位。
+                        .fixedSize(horizontal: true, vertical: false)
                 }
+                .layoutPriority(1)
                 .modifier(HeroButtonStyle())
             }
         } else {
