@@ -277,9 +277,14 @@ enum DebugLaunchOptions {
         ProcessInfo.processInfo.environment["LEITORQR_PLAN"]?.lowercased()
     }
 
-    /// `LEITORQR_PAYWALL_REASON=scan|limit|feature` 指定 DEBUG 付费墙的情境文案，用于截图验收。
+    /// `LEITORQR_PAYWALL_REASON=scan|limit|feature|onboarding` 指定 DEBUG 付费墙的情境文案，用于截图验收。
     static var paywallReason: String? {
         ProcessInfo.processInfo.environment["LEITORQR_PAYWALL_REASON"]?.lowercased()
+    }
+
+    /// `LEITORQR_ONBOARDING=1` 强制显示首次启动引导（不管之前是否看过）。
+    static var forceOnboarding: Bool {
+        ProcessInfo.processInfo.environment["LEITORQR_ONBOARDING"] == "1"
     }
 
 }

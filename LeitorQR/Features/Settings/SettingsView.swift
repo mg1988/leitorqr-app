@@ -284,8 +284,8 @@ struct SettingsView: View {
 ///   卡片上所有颜色都取自插画——第一、二版另配的照片暗角 / 纯色蓝和页面其他颜色对不上。
 /// - 内容：标题 + 一句话 + 三条打勾权益 → 整宽按钮。整张卡和按钮都只打开付费墙，不在这里直接购买。
 /// - 已解锁（11-27 第四版）：不再用插画当背景——76pt 高的横条里 scaledToFill 会把插画裁得只剩一截。
-///   改成「会员卡」：纯色底 + 左侧标题 + 右侧一张完整的会员二维码（用 App 自己的液态样式渲染，完整在卡内）
-///   + 底部三项已解锁权益。
+///   改成纯文字会员卡：纯色底 + 皇冠徽标 + 标题 / 说明 + 底部三项已解锁权益。
+///   （11-27 用户要求：卡上不放二维码。）
 /// 价格只来自 StoreKit，拿不到时显示「–」并禁用购买。
 private struct MembershipCard: View {
 
@@ -308,11 +308,8 @@ private struct MembershipCard: View {
     private static let cornerRadius: CGFloat = 22
     /// 卡片细描边：浅色模式下冰蓝底和页面灰底很接近，靠它把卡片边界勾出来。
     private static let cardStroke = Color(light: 0xCFE6EF, dark: 0x1B2A4A)
-    /// 会员码底板：两种外观都是白底（码必须深色码点 + 浅底才扫得出）。
-    private static let badgeStroke = Color(light: 0xD6E6EE, dark: 0x2A3B5E)
-
-    /// 会员卡右侧的码：渲染一次缓存起来。
-    @State private var memberCode: UIImage?
+    /// 皇冠徽标的底色：品牌蓝 / 深色模式下的亮蓝，图标白色。
+    private static let crownFill = Color(light: 0x2449E6, dark: 0x3D63F5)
     /// 已解锁卡片的入场（只播一次）。
     @State private var unlockedAppeared = false
 
@@ -454,25 +451,27 @@ private struct MembershipCard: View {
     // MARK: 已解锁
 
     /// ```
-    ///  👑 终身会员                     ┌────────┐
-    ///  Leitor QR Premium               │  QR    │  ← 完整显示在卡内，白底圆角
-    ///  所有功能已永久解锁                │        │
-    ///                                  └────────┘
-    ///  ✓ 无限历史   ✓ 全部样式   ✓ 安全检测      ›
+    ///  [👑]  终身会员                                   ›
+    ///        Leitor QR Premium
+    ///        所有功能已永久解锁
+    ///  ─────────────────────────────────────────
+    ///  ✓ 无限历史      ✓ 全部样式      ✓ 安全检测
     /// ```
+    /// 纯文字 + 一个皇冠徽标，所有元素都完整在卡内；不放二维码、不放插画。
     private var unlocked: some View {
         Button(action: openDetails) {
-            VStack(alignment: .leading, spacing: 0) {
-                HStack(alignment: .top, spacing: 12) {
-                    VStack(alignment: .leading, spacing: 6) {
-                        Label(L10n.Settings.cardLifetimeBadge, systemImage: "crown.fill")
+            VStack(alignment: .leading, spacing: 14) {
+                HStack(alignment: .center, spacing: 14) {
+                    crownBadge
+
+                    VStack(alignment: .leading, spacing: 3) {
+                        Text(L10n.Settings.cardLifetimeBadge)
                             .font(.system(size: 12, weight: .bold))
                             .foregroundStyle(Self.checkColor)
-                            .labelStyle(.titleAndIcon)
                             .lineLimit(1)
 
                         Text(verbatim: "Leitor QR Premium")
-                            .font(.system(size: 20, weight: .bold))
+                            .font(.system(size: 19, weight: .bold))
                             .foregroundStyle(Self.titleColor)
                             .lineLimit(1)
                             .minimumScaleFactor(0.8)
@@ -480,15 +479,19 @@ private struct MembershipCard: View {
                         Text(L10n.Settings.cardLifetimeDetail)
                             .font(.footnote)
                             .foregroundStyle(Self.subtitleColor)
-                            .lineLimit(2)
-                            .fixedSize(horizontal: false, vertical: true)
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.85)
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
 
-                    memberBadge
+                    Image(systemName: "chevron.right")
+                        .font(.system(size: 13, weight: .bold))
+                        .foregroundStyle(Self.subtitleColor)
                 }
 
-                Spacer(minLength: 14)
+                Rectangle()
+                    .fill(Self.cardStroke)
+                    .frame(height: 1)
 
                 HStack(spacing: 0) {
                     perk(L10n.Settings.cardPerkHistory, index: 0)
@@ -496,20 +499,14 @@ private struct MembershipCard: View {
                     perk(L10n.Settings.cardPerkStyles, index: 1)
                     Spacer(minLength: 8)
                     perk(L10n.Settings.cardPerkSecurity, index: 2)
-                    Spacer(minLength: 8)
-                    Image(systemName: "chevron.right")
-                        .font(.system(size: 13, weight: .bold))
-                        .foregroundStyle(Self.subtitleColor)
                 }
             }
             .padding(16)
-            .frame(height: 172)
             .contentShape(Rectangle())
         }
         .buttonStyle(PressableButtonStyle(scale: 0.98))
         .sensoryFeedback(.impact(weight: .light), trigger: tapCount)
         .task {
-            if memberCode == nil { memberCode = Self.renderMemberCode() }
             guard !unlockedAppeared else { return }
             withAnimation(Theme.Motion.resolve(Theme.Motion.smooth, reduceMotion: reduceMotion)) {
                 unlockedAppeared = true
@@ -517,26 +514,19 @@ private struct MembershipCard: View {
         }
     }
 
-    /// 右上角的会员码：白底圆角板 + 液态宝石蓝样式的码，整块完整在卡片里。
-    private var memberBadge: some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: 16, style: .continuous)
-                .fill(Color.white)
-            RoundedRectangle(cornerRadius: 16, style: .continuous)
-                .strokeBorder(Self.badgeStroke, lineWidth: 1)
-            if let memberCode {
-                Image(uiImage: memberCode)
-                    .interpolation(.high)
-                    .resizable()
-                    .scaledToFit()
-                    .padding(4)
-                    .transition(.opacity)
+    /// 左侧 52pt 圆角方块 + 白色皇冠，完整在卡内。入场时轻轻放大淡入一次。
+    private var crownBadge: some View {
+        RoundedRectangle(cornerRadius: 14, style: .continuous)
+            .fill(Self.crownFill)
+            .frame(width: 52, height: 52)
+            .overlay {
+                Image(systemName: "crown.fill")
+                    .font(.system(size: 22, weight: .semibold))
+                    .foregroundStyle(.white)
             }
-        }
-        .frame(width: 92, height: 92)
-        .scaleEffect(unlockedAppeared || reduceMotion ? 1 : 0.9)
-        .opacity(unlockedAppeared ? 1 : 0)
-        .accessibilityHidden(true)
+            .scaleEffect(unlockedAppeared || reduceMotion ? 1 : 0.85)
+            .opacity(unlockedAppeared ? 1 : 0)
+            .accessibilityHidden(true)
     }
 
     /// 一项已解锁权益：对勾 + 短文字，纯文字不加底色胶囊。依次淡入（只播一次）。
@@ -556,16 +546,6 @@ private struct MembershipCard: View {
         .animation(
             Theme.Motion.resolve(Theme.Motion.smooth, reduceMotion: reduceMotion).delay(0.12 + Double(index) * 0.06),
             value: unlockedAppeared
-        )
-    }
-
-    /// 用创建页同一套渲染器出码（精选「宝石蓝」：液态码点 + 双色眼），内容是 App 自己的标识。
-    private static func renderMemberCode() -> UIImage? {
-        guard let preset = QRStylePreset.all.first(where: { $0.id == "sapphire" }) else { return nil }
-        return try? BarcodeImageGenerator.render(
-            value: SubscriptionManager.showcaseCodeValue,
-            kind: .qr,
-            style: preset.applying(to: QRCodeStyle())
         )
     }
 

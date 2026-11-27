@@ -120,7 +120,7 @@
 		4CF84545620CBD5C2C6F1893 /* LegalDocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalDocumentView.swift; sourceTree = "<group>"; };
 		4E28DE144FE8605C72E3159A /* WiFiConnectorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiConnectorService.swift; sourceTree = "<group>"; };
 		4FDF07EF17F68919068A1D7B /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
-		54A2E54903A9961DDCCBFBF7 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		54A2E54903A9961DDCCBFBF7 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		5577B92ECD8C75ACE00DADEF /* ScanSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanSource.swift; sourceTree = "<group>"; };
 		5AC31B4021D5AC51A6AC30F2 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		5FE36704E048E1DB6BD9D674 /* LiquidLens.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = LiquidLens.metal; sourceTree = "<group>"; };
@@ -140,7 +140,7 @@
 		90E9D32B4CE8E9B0765D66FA /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
 		936B99C5D37878D2FBE1699A /* SubscriptionCenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionCenterView.swift; sourceTree = "<group>"; };
 		9810BBF5EC36539C20CF51D7 /* ProPortal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProPortal.swift; sourceTree = "<group>"; };
-		98AA2DC861D2DFDD71D802D7 /* LeitorQR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeitorQR.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		98AA2DC861D2DFDD71D802D7 /* LeitorQR.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = LeitorQR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BC27BF1C07A9795D1C34E03 /* GlassStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassStyle.swift; sourceTree = "<group>"; };
 		A03AD9F9D0C036D7575E864E /* HistoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailView.swift; sourceTree = "<group>"; };
 		A7D1794BCDFA2F4CA32E1F20 /* ScanContentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanContentType.swift; sourceTree = "<group>"; };
@@ -450,6 +450,12 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					B68B126B087E4142FAACE0B9 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = 96B397512F63C8CA69022900 /* Build configuration list for PBXProject "LeitorQR" */;
 			developmentRegion = "pt-BR";
@@ -581,8 +587,6 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Support/LeitorQR-Hotspot.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = U4AF57UZM2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
@@ -593,8 +597,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mg.localicard;
 				PRODUCT_NAME = LeitorQR;
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = localCard;
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -609,8 +611,6 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Support/LeitorQR-Hotspot.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = U4AF57UZM2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
@@ -621,8 +621,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mg.localicard;
 				PRODUCT_NAME = LeitorQR;
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = localCard;
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;

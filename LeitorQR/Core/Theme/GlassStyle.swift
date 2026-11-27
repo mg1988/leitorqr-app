@@ -121,9 +121,10 @@ private func makeGlass(tone: GlassTone, tint: Color?, interactive: Bool) -> Glas
     } else if let toneTint = tone.tintColor {
         glass = glass.tint(toneTint)
     }
-    if interactive {
-        glass = glass.interactive()
-    }
+    // 11-27：不再开 `.interactive()`。这些玻璃都套在 Button 的 label 上，可交互玻璃会自己处理触摸
+    // （按压形变），Button 时常收不到点击——付费墙关闭按钮要点好几次就是这个原因。
+    // 按压反馈交给按钮样式（PressableButtonStyle 缩放）；真要系统玻璃按压效果，用 `.buttonStyle(.glass)`。
+    _ = interactive
     return glass
 }
 
@@ -162,8 +163,8 @@ struct GlassCircleButton: View {
                 }
             }
         }
-        .buttonStyle(.plain)
-        .glassSurface(.circle, tone: .dark, tint: tint, interactive: true)
+        .buttonStyle(PressableButtonStyle(scale: 0.9))
+        .glassSurface(.circle, tone: .dark, tint: tint)
         .accessibilityLabel(accessibilityLabel)
         .accessibilityAddTraits(isOn == true ? [.isSelected] : [])
     }

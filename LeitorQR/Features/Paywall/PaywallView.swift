@@ -21,6 +21,9 @@ struct PaywallView: View {
 
     var showsCloseButton: Bool = true
     var triggerReason: PaywallTriggerManager.TriggerReason? = nil
+    /// 嵌在别的页面里（首次启动引导的最后一步）时由外面处理关闭；参数 = 是否刚买完。
+    /// nil = 作为 fullScreenCover 呈现，走 PaywallTriggerManager + dismiss。
+    var onClose: ((_ purchased: Bool) -> Void)? = nil
 
     @EnvironmentObject private var subscriptions: SubscriptionManager
     @Environment(\.dismiss) private var dismiss
@@ -93,10 +96,7 @@ struct PaywallView: View {
             }
         }
         .onChange(of: subscriptions.purchaseState) { _, state in
-            if state == .success {
-                PaywallTriggerManager.shared.dismissWithoutCooldown()
-                dismiss()
-            }
+            if state == .success { close(purchased: true) }
         }
         .sheet(item: $presentedLegalDoc) { doc in
             NavigationStack {
@@ -136,29 +136,43 @@ struct PaywallView: View {
                 .foregroundStyle(Theme.Palette.primary)
                 .padding(.horizontal, 14)
                 .frame(height: 34)
-                .glassSurface(.capsule, interactive: true)
             }
-            .buttonStyle(PressableButtonStyle())
+            .modifier(PaywallGlassButton(shape: .capsule))
             .disabled(isRestoring)
 
             Spacer()
 
             if showsCloseButton {
+                // 11-27「要点很多次才关掉」：原来是在按钮的 label 上套 `.glassEffect(.interactive())`，
+                // iOS 26 上可交互玻璃会自己吃掉触摸（按压形变），Button 经常收不到点击；
+                // 而且点击区只有 34pt，低于 44pt。现在用系统 `.buttonStyle(.glass)`（点击和玻璃反馈都由系统处理），
+                // 点击区补到 44pt。
                 Button {
-                    PaywallTriggerManager.shared.recordDismiss()
-                    dismiss()
+                    close(purchased: false)
                 } label: {
                     Image(systemName: "xmark")
                         .font(.system(size: 13, weight: .bold))
                         .foregroundStyle(Theme.Palette.textSecondary)
                         .frame(width: 34, height: 34)
-                        .glassSurface(.circle, interactive: true)
                 }
-                .buttonStyle(PressableButtonStyle(scale: 0.9))
+                .modifier(PaywallGlassButton(shape: .circle))
                 .accessibilityLabel(L10n.Common.close)
             }
         }
         .padding(.top, Theme.Spacing.s)
+    }
+
+    private func close(purchased: Bool) {
+        if let onClose {
+            onClose(purchased)
+            return
+        }
+        if purchased {
+            PaywallTriggerManager.shared.dismissWithoutCooldown()
+        } else {
+            PaywallTriggerManager.shared.recordDismiss()
+        }
+        dismiss()
     }
 
     // MARK: - 标题（情境化）
@@ -174,6 +188,8 @@ struct PaywallView: View {
             return L10n.Paywall.contextLimitTitle
         case .featureGate:
             return L10n.Paywall.contextFeatureTitle
+        case .onboarding:
+            return L10n.Paywall.contextOnboardingTitle
         case .coldLaunch, .direct:
             return L10n.Paywall.title
         }
@@ -190,6 +206,8 @@ struct PaywallView: View {
             return L10n.Paywall.contextLimitSubtitle
         case .featureGate:
             return L10n.Paywall.contextFeatureSubtitle
+        case .onboarding:
+            return L10n.Paywall.contextOnboardingSubtitle
         case .coldLaunch, .direct:
             return L10n.Paywall.subtitle
         }
@@ -510,3 +528,43 @@ private enum PaywallTemplateCache {
             .environmentObject(SubscriptionManager())
     }
 }
+
+/// 付费墙顶栏的两个小玻璃钮（恢复购买 / 关闭）。
+/// iOS 26：系统 `.glass` 按钮样式；低版本：材质底 + 细描边。两种情况点击区都不小于 44pt。
+private struct PaywallGlassButton: ViewModifier {
+    enum Shape { case capsule, circle }
+    let shape: Shape
+
+    func body(content: Content) -> some View {
+        if #available(iOS 26.0, *) {
+            switch shape {
+            case .capsule:
+                content
+                    .buttonStyle(.glass)
+                    .buttonBorderShape(.capsule)
+                    .frame(minHeight: 44)
+            case .circle:
+                content
+                    .buttonStyle(.glass)
+                    .buttonBorderShape(.circle)
+                    .frame(minWidth: 44, minHeight: 44)
+            }
+        } else {
+            switch shape {
+            case .capsule:
+                content
+                    .glassSurface(.capsule)
+                    .padding(.vertical, 5)
+                    .contentShape(Rectangle())
+                    .buttonStyle(PressableButtonStyle())
+            case .circle:
+                content
+                    .glassSurface(.circle)
+                    .padding(5)
+                    .contentShape(Rectangle())
+                    .buttonStyle(PressableButtonStyle(scale: 0.9))
+            }
+        }
+    }
+}
+

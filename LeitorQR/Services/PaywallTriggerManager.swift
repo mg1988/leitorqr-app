@@ -21,6 +21,7 @@ final class PaywallTriggerManager: ObservableObject {
         case featureGate(String) // 触发了高级模版或自定义 Logo 功能锁
         case usageLimit          // 达到历史记录 10 条上限
         case postAha             // 达成体验高光时刻（多次成功扫码）
+        case onboarding          // 首次安装：引导页看完（或跳过）后展示一次
     }
 
     @Published var isPaywallPresented: Bool = false
@@ -75,7 +76,7 @@ final class PaywallTriggerManager: ObservableObject {
     /// 用户自己点开的 PRO 入口关掉后不该把 postAha 触发屏蔽 24 小时。
     func recordDismiss() {
         switch triggerReason {
-        case .coldLaunch, .postAha, .usageLimit:
+        case .coldLaunch, .postAha, .usageLimit, .onboarding:
             defaults.set(Date().timeIntervalSince1970, forKey: lastDismissKey)
         case .direct, .featureGate:
             break
@@ -95,6 +96,21 @@ final class PaywallTriggerManager: ObservableObject {
         lastKnownPremium = isPremium
         attemptColdLaunchIfNeeded()
     }
+
+    // MARK: - 引导结束
+
+    /// 首次启动引导的最后一步直接是付费墙（嵌在引导里，不走 fullScreenCover）。
+    /// 占掉本次进程的冷启动名额：用户第一次扫完码不会再被弹一次。
+    func noteOnboardingPaywallShown() {
+        didAttemptColdLaunch = true
+    }
+
+    /// 引导里的付费墙被关掉（没买）：和其他系统主动弹出的一样进入 24 小时冷却。
+    func recordOnboardingPaywallDismissed() {
+        defaults.set(Date().timeIntervalSince1970, forKey: lastDismissKey)
+    }
+
+    // MARK: - 冷启动
 
     /// 冷启动付费墙统一入口：两个前置条件（订阅刷新完成 + 首次价值时刻）都满足时才弹。
     /// 哪个条件后到就在哪个时机弹；本次进程最多弹一次。

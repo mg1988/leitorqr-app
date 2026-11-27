@@ -705,6 +705,8 @@ enum L10n {
         static var contextLimitSubtitle: String { LanguageManager.localized("paywall.context.limit.subtitle", comment: "Subtítulo histórico cheio") }
         static var contextFeatureTitle: String { LanguageManager.localized("paywall.context.feature.title", comment: "Título contextual funcionalidade bloqueada") }
         static var contextFeatureSubtitle: String { LanguageManager.localized("paywall.context.feature.subtitle", comment: "Subtítulo funcionalidade bloqueada") }
+        static var contextOnboardingTitle: String { LanguageManager.localized("paywall.context.onboarding.title", comment: "Título contextual (após a introdução)") }
+        static var contextOnboardingSubtitle: String { LanguageManager.localized("paywall.context.onboarding.subtitle", comment: "Subtítulo contextual (após a introdução)") }
         static var templateHint: String { LanguageManager.localized("paywall.template.hint", comment: "Dica dos modelos PRO") }
         static var ctaWeekly: String { LanguageManager.localized("paywall.cta.weekly", comment: "CTA da experiência de 7 dias") }
         static var planWeekly: String { LanguageManager.localized("paywall.plan.weekly", comment: "Plano de experiência de 7 dias") }
@@ -807,5 +809,22 @@ enum L10n {
         static var termsSec4Body: String { LanguageManager.localized("legal.terms.sec4.body", comment: "Texto 4 Termos") }
         static var termsSec5Title: String { LanguageManager.localized("legal.terms.sec5.title", comment: "Secção 5 Termos") }
         static var termsSec5Body: String { LanguageManager.localized("legal.terms.sec5.body", comment: "Texto 5 Termos") }
+    }
+
+    enum Onboarding {
+        static var skip: String { LanguageManager.localized("onboarding.skip", comment: "Saltar") }
+        static var next: String { LanguageManager.localized("onboarding.next", comment: "Continuar") }
+        static var start: String { LanguageManager.localized("onboarding.start", comment: "Começar a ler") }
+        static var scanTitle: String { LanguageManager.localized("onboarding.scan.title", comment: "Leia qualquer código") }
+        static var scanBody: String { LanguageManager.localized("onboarding.scan.body", comment: "QR, códigos de barras, Wi‑Fi e contactos. Os links suspeitos são assinalados antes de os abrir.") }
+        static var scanBadge: String { LanguageManager.localized("onboarding.scan.badge", comment: "Link seguro") }
+        static var createTitle: String { LanguageManager.localized("onboarding.create.title", comment: "Crie códigos bonitos") }
+        static var createBody: String { LanguageManager.localized("onboarding.create.body", comment: "Escolha estilos, cores e o seu logótipo. Partilhe ou guarde nas Fotografias.") }
+        static var privacyTitle: String { LanguageManager.localized("onboarding.privacy.title", comment: "Privado por defeito") }
+        static var privacyBody: String { LanguageManager.localized("onboarding.privacy.body", comment: "Tudo fica no seu iPhone.") }
+        static var privacyNoAccount: String { LanguageManager.localized("onboarding.privacy.noAccount", comment: "Sem conta") }
+        static var privacyNoTracking: String { LanguageManager.localized("onboarding.privacy.noTracking", comment: "Sem rastreio nem anúncios") }
+        static var privacyLocal: String { LanguageManager.localized("onboarding.privacy.local", comment: "Histórico só no dispositivo") }
+        static var cameraNote: String { LanguageManager.localized("onboarding.camera.note", comment: "A seguir pedimos acesso à câmara, usada apenas para ler códigos em tempo real.") }
     }
 }
