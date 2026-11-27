@@ -114,7 +114,7 @@ PAGAMENTO ÚNICO
 30 IDIOMAS
 Português (Brasil e Portugal), inglês, espanhol, alemão, francês, italiano, holandês, polonês, sueco, dinamarquês, norueguês, finlandês, russo, ucraniano, turco, árabe, hebraico, híndi, indonésio, malaio, vietnamita, tailandês, coreano, japonês, chinês simplificado e chinês tradicional.
 
-Dúvidas, sugestões ou problemas: weimi@gmail.com
+Dúvidas, sugestões ou problemas: genweimi@gmail.com
 
 Política de Privacidade: https://mg1988.github.io/leitorqr-privacy/
 Termos de Uso: https://mg1988.github.io/leitorqr-privacy/#terms
@@ -197,7 +197,7 @@ python3 scripts/store_shots.py
 
 ## 六、上架前仍需你确认
 
-- [ ] 支持邮箱：现在写的是 `weimi@gmail.com`（站点里也是它），要不要换成独立域名邮箱？
+- [x] 支持邮箱：`genweimi@gmail.com`（与站点、App 内法律条款一致，已确认）
 - [ ] 巴西定价：买断价 9,99 € 在巴西区会按 Apple 汇率档位换算，需在 ASC 里确认最终 BRL 价格与截图文案不冲突。
 - [ ] 主分类：竞品放在 `Utilidades`。我们建议 `Utilidades`，第二分类 `Produtividade`。
 - [ ] 年龄分级：全年龄（+4），与竞品一致。
