@@ -76,6 +76,11 @@ final class SubscriptionManager: ObservableObject {
     /// 在售商品：**只有买断**（2026-11-27 体验卡下架）。
     /// 体验卡与老订阅的 ID 保留在 `legacyProductIDs` 里，只用于识别已购用户的既有权益，
     /// 不进入 `Product.products(for:)` 请求，也不出现在付费墙和设置页。
+    ///
+    /// 事实核对（2026-11-28）：ASC 后台**从未配置**过体验卡或年/月订阅，
+    /// 所以这些 ID 在真实 StoreKit 里取不到商品、也不可能产生交易；
+    /// `Support/Products.storekit` 里那条 1.99 的 weeklypass 只是本地 StoreKit 测试文件，
+    /// 不会上传、不影响审核，也不代表在售。整套遗留识别是防御性代码，可以留着不动。
     static let allProductIDs = [lifetimeProductID]
     /// 已下架但仍需识别权益的商品：7 天体验卡 + 老订阅。交易监听要放行它们（退款要能及时生效）。
     static let legacyProductIDs = [weeklyPassProductID] + subscriptionProductIDs + legacyLifetimeProductIDs

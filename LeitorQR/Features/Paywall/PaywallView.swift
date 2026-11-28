@@ -56,6 +56,12 @@ struct PaywallView: View {
             topBar
                 .padding(.top, Theme.Spacing.xs)
 
+            // 多出来的高度**拆成两段**：上面这段封顶 96pt，剩下的留给买断卡上方。
+            // 只留一个 Spacer 时，6.3" 上会把 ~200pt 全堆在权益和买断卡之间，
+            // 上半截挤成一坨、下半截空一大块（实测 92 / 105 最均衡）。
+            // 用 maxHeight 而不是固定高度：小屏余量不足时自动压回去，4.7" 不受影响。
+            Spacer(minLength: 0).frame(maxHeight: 96)
+
             PaywallTemplateFan(isRevealed: appeared, reduceMotion: reduceMotion)
                 .frame(minHeight: 84, idealHeight: 132, maxHeight: 132)
                 .padding(.top, Theme.Spacing.xs)
@@ -69,7 +75,7 @@ struct PaywallView: View {
                 .padding(.top, Theme.Spacing.l)
                 .entrance(2, appeared: appeared, reduceMotion: reduceMotion)
 
-            Spacer(minLength: Theme.Spacing.m)
+            Spacer(minLength: Theme.Spacing.l)
 
             // 已经是会员（重装后恢复了买断、测试环境里买过）：原地换成「已解锁」，由用户点「继续」离开，
             // 不自动关闭、不显示购买按钮。

@@ -649,6 +649,11 @@ struct CreateFormView: View {
             draft.primary = parts[0]
             if parts.count > 1 { draft.secondary = parts[1] }
             if parts.count > 2 { draft.tertiary = parts[2] }
+            // Wi-Fi 的密码放在 `draft.password`（SecureField），不占 secondary。
+            // 不补这一条，`CREATE_TYPE=wifi` 的表单永远校验不过，进不去第二步。
+            if case .type(let contentType) = mode, contentType == .wifi, parts.count > 1 {
+                draft.password = parts[1]
+            }
         }
         if let raw = DebugLaunchOptions.barcodeKind, let preset = BarcodeKind(rawValue: raw) {
             kind = preset

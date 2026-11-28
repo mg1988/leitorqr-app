@@ -16,9 +16,15 @@ enum HistoryStore {
     private static let logger = Logger(subsystem: "com.leitorqr.app", category: "HistoryStore")
 
     /// 写入一条历史。返回是否真正落盘。
+    /// `createdAt` 只给 DEBUG 的示例数据用（让"今天/昨天"分组像真的），正常调用保持默认。
     @discardableResult
-    static func save(_ content: ScanContent, in context: ModelContext, isPremium: Bool) -> Bool {
-        let record = ScanRecord(content: content)
+    static func save(
+        _ content: ScanContent,
+        in context: ModelContext,
+        isPremium: Bool,
+        createdAt: Date = Date()
+    ) -> Bool {
+        let record = ScanRecord(content: content, createdAt: createdAt)
         context.insert(record)
         trim(in: context, isPremium: isPremium)
         return commit(in: context, operation: "save scan")

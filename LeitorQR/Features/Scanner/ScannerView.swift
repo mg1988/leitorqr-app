@@ -678,7 +678,7 @@ struct ScannerView: View {
             .map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
             .filter { !$0.isEmpty }
         let contents = payloads.map {
-            ScanContent(rawValue: $0, barcodeFormat: .qrCode, source: .camera)
+            ScanContent(rawValue: $0, barcodeFormat: DebugLaunchOptions.simulatedFormat, source: .camera)
         }
         Task { @MainActor in
             try? await Task.sleep(nanoseconds: 1_200_000_000)

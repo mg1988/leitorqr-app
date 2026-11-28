@@ -340,7 +340,12 @@ struct OnboardingView: View {
 
     let onFinish: () -> Void
 
-    @State private var page = 0
+    @State private var page = {
+        #if DEBUG
+        if let raw = DebugLaunchOptions.onboardingPage { return raw }
+        #endif
+        return 0
+    }()
     private let lastPage = 2
 
     var body: some View {
@@ -788,8 +793,11 @@ private struct OnboardingPrivacyArt: View {
                         Text(row.title)
                             .font(.subheadline.weight(.semibold))
                             .foregroundStyle(Theme.Palette.textPrimary)
-                            .lineLimit(1)
-                            .minimumScaleFactor(0.8)
+                            // 长语言（pt "Sem rastreamento nem análise de uso"）在 1 行里会被截成
+                            // "Sem rastreamento nem an…"，卡片里那条文案本身就是卖点，不能截。
+                            .lineLimit(2)
+                            .fixedSize(horizontal: false, vertical: true)
+                            .multilineTextAlignment(.leading)
                         Spacer(minLength: 0)
                         Image(systemName: "checkmark")
                             .font(.system(size: 13, weight: .bold))

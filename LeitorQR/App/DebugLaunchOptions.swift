@@ -209,6 +209,15 @@ enum DebugLaunchOptions {
         ProcessInfo.processInfo.environment["LEITORQR_SIMULATE_SCAN"]
     }
 
+    /// `LEITORQR_SIMULATE_FORMAT=ean13` 注入识别时用的码制（默认 qrCode）。
+    /// 出商店图要展示"能读商品条码"时，光有 13 位数字不够，格式标记也得对。
+    static var simulatedFormat: BarcodeFormat {
+        guard let raw = ProcessInfo.processInfo.environment["LEITORQR_SIMULATE_FORMAT"] else {
+            return .qrCode
+        }
+        return BarcodeFormat(rawValue: raw) ?? .qrCode
+    }
+
     /// `LEITORQR_SHORTCUT_WIFI=1`：启动时等同于执行了快捷指令「扫码连 Wi-Fi」，
     /// 不用去快捷指令 App 里找，直接在 Xcode 里验收这个模式（可配合 `LEITORQR_SIMULATE_SCAN=WIFI:...`）。
     static var shortcutWiFi: Bool {
@@ -269,6 +278,24 @@ enum DebugLaunchOptions {
     static var forceTrial: Bool? {
         guard let raw = ProcessInfo.processInfo.environment["LEITORQR_FORCE_TRIAL"] else { return nil }
         return raw == "1"
+    }
+
+    /// `LEITORQR_SHEET_LARGE=1` 结果 sheet 直接以全高打开，供商店图使用。
+    static var sheetLarge: Bool {
+        ProcessInfo.processInfo.environment["LEITORQR_SHEET_LARGE"] == "1"
+    }
+
+    /// `LEITORQR_ONBOARDING_PAGE=2` 引导直接从第几页开始（0 扫码 / 1 生成 / 2 隐私），
+    /// 用于截商店图时免去点按翻页（simctl 点不了）。
+    static var onboardingPage: Int? {
+        ProcessInfo.processInfo.environment["LEITORQR_ONBOARDING_PAGE"].flatMap(Int.init)
+    }
+
+    /// `LEITORQR_HIDE_PRICE=1` 截图时隐藏价格。
+    /// simctl 跑不起来 StoreKit，价格只能走兜底常量（"US$4.99"），与葡萄牙区真实标价不一致；
+    /// 商店图里出现错误价格属于误导，所以出图时干脆不显示。
+    static var hidePrice: Bool {
+        ProcessInfo.processInfo.environment["LEITORQR_HIDE_PRICE"] == "1"
     }
 
     /// `LEITORQR_PAYWALL_REASON=scan|limit|feature|onboarding` 指定 DEBUG 付费墙的情境文案，用于截图验收。

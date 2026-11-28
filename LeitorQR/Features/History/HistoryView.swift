@@ -722,7 +722,11 @@ struct HistoryView: View {
         let samples: [(String, BarcodeFormat, ScanSource, Date)] = [
             ("https://exemplo.pt/menu", .qrCode, .camera, now),
             ("5901234123457", .ean13, .camera, now.addingTimeInterval(-86400)), // 昨天
-            ("Bem-vindo ao Leitor QR", .qrCode, .photos, now.addingTimeInterval(-86400 * 3)) // 更早
+            ("Bem-vindo ao Leitor QR", .qrCode, .photos, now.addingTimeInterval(-86400 * 3)), // 更早
+            // 下面三条只为让示例历史有"真在用"的样子（出商店图时不能满屏都是同一条重复）。
+            ("WIFI:T:WPA;S:Cafe Central;P:cafe2026;;", .qrCode, .camera, now.addingTimeInterval(-3600 * 5)),
+            ("tel:+351912345678", .qrCode, .camera, now.addingTimeInterval(-86400 * 2)),
+            ("GEO:38.7223,-9.1393", .qrCode, .photos, now.addingTimeInterval(-86400 * 4))
         ]
         for index in 0..<max(1, DebugLaunchOptions.seedHistoryCount) {
             let sample = samples[index % samples.count]
@@ -731,7 +735,7 @@ struct HistoryView: View {
                 barcodeFormat: sample.1,
                 source: sample.2
             )
-            HistoryStore.save(record, in: modelContext, isPremium: true)
+            HistoryStore.save(record, in: modelContext, isPremium: true, createdAt: sample.3)
         }
         #endif
     }

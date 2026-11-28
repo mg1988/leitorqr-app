@@ -14,6 +14,15 @@ struct ScanResultView: View {
 
     @Environment(\.dismiss) private var dismiss
 
+    /// 出商店图时用 `LEITORQR_SHEET_LARGE=1` 直接以全高呈现：
+    /// 默认的 64% 高度会让内容下方留一大片空白，放进商店图里像是页面没做完。
+    @State private var detent: PresentationDetent = {
+        #if DEBUG
+        if DebugLaunchOptions.sheetLarge { return .large }
+        #endif
+        return .fraction(0.64)
+    }()
+
     var body: some View {
         NavigationStack {
             ScanResultContent(content: content, justScanned: justScanned, canRescan: true, pinsActions: true)
@@ -28,7 +37,7 @@ struct ScanResultView: View {
                     }
                 }
         }
-        .presentationDetents([.fraction(0.64), .large])
+        .presentationDetents([.fraction(0.64), .large], selection: $detent)
         .presentationDragIndicator(.visible)
         .modifier(ResultSheetBackground())
     }
@@ -789,15 +798,14 @@ struct ScanResultContent: View {
                     }
 
                     // 加白名单：仅 PRO。用户主动点开付费墙，不受冷却期限制。
-                    if !trusted, let host = url.host {
-                        Button {
+                    if !trusted, let host = url.host {                        Button {
                             if subscriptions.isPremium {
                                 withAnimation(Theme.Motion.smooth) { addToWhitelist(host) }
                             } else {
                                 PaywallTriggerManager.shared.triggerFeatureGate("security.whitelist")
                             }
                         } label: {
-                            Label(L10n.Result.riskAddWhitelist, systemImage: "checkmark.shield")
+                            Label(whitelistActionLabel, systemImage: "checkmark.shield")
                                 .font(Theme.Typography.caption.weight(.semibold))
                         }
                         .buttonStyle(TextButtonStyle())
@@ -837,6 +845,22 @@ struct ScanResultContent: View {
     private func addToWhitelist(_ host: String) {
         guard RiskStore.addToWhitelist(host) else { return }
         trustedHosts = RiskStore.whitelist
+    }
+
+    /// 「加入信任」按钮的文案。
+    ///
+    /// 资产里这条串自带 `(PRO)` 后缀（用来告诉免费用户这是付费功能），
+    /// 但已购用户看到的是「（付费功能标记）」，读起来像功能还没解锁。
+    /// `PRO` 是品牌词、所有语言都保持原文，所以直接按括号切掉是安全的；
+    /// 免费用户仍然看到完整标注。
+    private var whitelistActionLabel: String {
+        let full = L10n.Result.riskAddWhitelist
+        guard subscriptions.isPremium else { return full }
+        return full.replacingOccurrences(
+            of: #"\s*[（(]\s*PRO\s*[）)]"#,
+            with: "",
+            options: .regularExpression
+        )
     }
 
     /// 文字 / 图标用的风险色（安全态用对比度足够的 successText）。

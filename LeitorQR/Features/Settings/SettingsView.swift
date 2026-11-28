@@ -262,6 +262,10 @@ struct SettingsView: View {
     /// 卡片下方的价格披露：未购买时写清「一次性、不续费」（审核 3.1 要求价格说明清晰）。
     private var priceDisclosure: String? {
         guard !subscriptions.isPremium else { return nil }
+        #if DEBUG
+        // 同 `lifetimePrice`：兜底价与真实后台标价不一致时宁可不出图。
+        if DebugLaunchOptions.hidePrice { return nil }
+        #endif
         guard let lifetime = subscriptions.product(id: SubscriptionManager.lifetimeProductID)?.displayPrice else {
             return L10n.Paywall.priceNotePending
         }
@@ -320,7 +324,12 @@ private struct MembershipCard: View {
     private var snapshot: SubscriptionSnapshot { subscriptions.snapshot }
 
     private var lifetimePrice: String? {
-        subscriptions.product(id: SubscriptionManager.lifetimeProductID)?.displayPrice
+        #if DEBUG
+        // 截图/验收用：simctl 拿不到真实商品，兜底价会和后台不一致，
+        // 商店图里出现错误价格属于误导，所以调试时可以直接不显示价格。
+        if DebugLaunchOptions.hidePrice { return nil }
+        #endif
+        return subscriptions.product(id: SubscriptionManager.lifetimeProductID)?.displayPrice
     }
 
     private enum Mode: Equatable {
