@@ -148,38 +148,151 @@ barcode,ean,wifi,history,offline,import,photo,privacy,no account,check link,secu
 One-time purchase, no subscription. No account, no ads. Scan QR and barcodes, check links before opening, and create codes that look like you.
 ```
 
+### 描述
+
+```
+Scan, create, check — no account, no ads, no subscription.
+
+Three things, done properly. One payment.
+
+READ ANY CODE
+• QR, Aztec, PDF417, Data Matrix, Code 128, Code 39, EAN-13, EAN-8 and UPC-E
+• Results in under a second, with continuous focus and a flashlight
+• Several codes in one frame? The app lists them all and you pick one
+• Import a photo from your library and read the code inside it
+• Wi-Fi: join the network without typing the password
+• Phone, SMS, email, contact, event and location: one tap opens the right app
+
+CHECK BEFORE YOU OPEN
+• Links are checked on the device: HTTPS, IP address instead of a domain, sensitive words, URL shorteners
+• A clear verdict — safe, caution or risk — with the reasons listed
+• Domains you trust go on a list and stop raising flags
+• The real address is shown before anything opens
+
+MAKE YOUR OWN CODES
+• 18 types: social profiles, website, text, email, SMS, phone, Wi-Fi, contact, location and more
+• Customize dots, corners, colors, eyes and a center logo
+• 12 ready-made templates for posters, gifts and shop windows
+• Export in high resolution to Photos, or share right away
+
+PRIVACY BY DEFAULT
+• No account, no sign-in
+• No tracking, no ads, no third-party SDKs
+• History stays on your device; nothing is uploaded
+• Works offline
+
+ONE PAYMENT
+• Every feature for a single payment. No subscription, no auto-renewal, no recurring charge.
+• Free version: unlimited scanning, limited history and basic link checks.
+
+30 LANGUAGES
+Portuguese (Brazil and Portugal), English, Spanish, German, French, Italian, Dutch, Polish, Swedish, Danish, Norwegian, Finnish, Russian, Ukrainian, Turkish, Arabic, Hebrew, Hindi, Indonesian, Malay, Vietnamese, Thai, Korean, Japanese, Simplified Chinese and Traditional Chinese.
+
+Questions, suggestions or problems: genweimi@gmail.com
+
+Privacy Policy: https://mg1988.github.io/leitorqr-privacy/
+Terms of Use: https://mg1988.github.io/leitorqr-privacy/#terms
+```
+
+
 ---
 
-## 四、截图（6 张，1206×2622 · iPhone Pro 6.3 吋）
+## 四、截图（6 张 × 2 语言，1206×2622 · iPhone Pro 6.3 吋）
 
-文件在 `store/screenshots/`，顺序即 App Store 展示顺序。
+两套同构、同版式的图，只换语言与文案：`store/screenshots/pt-BR/` 与 `store/screenshots/en/`，**文件名顺序即 App Store 展示顺序**。
 
-| # | 文件                 | 标题                        | 副标题                                 | 对应界面                           |
-| - | ------------------ | ------------------------- | ----------------------------------- | ------------------------------ |
-| 1 | `01_risco.png`     | Saiba se o link é seguro  | Antes de abrir, não depois.         | 风险判定结果页（Caution + 三条原因）        |
-| 2 | `02_wifi.png`      | Wi-Fi com um toque        | Sem digitar senha na mão.           | Wi-Fi 结果页（SSID / senha / 连接按钮） |
-| 3 | `03_historico.png` | Tudo fica no seu aparelho | Histórico local, sem conta.         | 历史页（统计 + 配额 + 记录列表）            |
-| 4 | `04_criar.png`     | Códigos com a sua cara    | Cores, pontos, olhos e logo.        | 创建设计页（大码 + 8 款样式）              |
-| 5 | `05_tipos.png`     | 18 tipos de código        | QR, barras, Wi-Fi, contatos e mais. | 创建首页（类型网格）                     |
-| 6 | `06_idiomas.png`   | 30 idiomas, de verdade    | Troca na hora, sem reiniciar.       | 语言列表（带搜索）                      |
+### pt-BR
 
-**排序逻辑**：竞品第 1 张是「Escanear」，我们第 1 张是**扫码后的判定结果**——因为模拟器没有摄像头，拍不到真实取景画面，而判定页本身就是我们最独特的界面。接着 Wi-Fi（最具体的使用场景）、历史（隐私主张）、创作、类型、语言。
+| # | 文件                        | 标题（主）                | 副标题                                     | 对应界面                     |
+| - | ------------------------- | -------------------- | --------------------------------------- | ------------------------ |
+| 1 | `01_criar.png`            | Códigos com a sua cara | Cores, pontos, olhos, logo e modelos.   | 创建设计页（网址码 + 8 款样式）        |
+| 2 | `02_codigo_barras.png`    | Lê QR e código de barras | EAN-13, Code 128, Code 39 e mais.     | 商品条码扫描结果（EAN-13 + 号码 + 复制） |
+| 3 | `03_risco.png`            | Confere o link antes de abrir | Avisa domínio falso, sem HTTPS, golpe. | 风险判定页                  |
+| 4 | `04_historico.png`        | Nunca perca um código | Histórico no aparelho, com busca e filtros. | 历史页（统计 + 今天/昨天分组）      |
+| 5 | `05_privacidade.png`      | Sem conta. Sem anúncio. | Nenhum dado sai do aparelho.           | 引导隐私页                    |
+| 6 | `06_preco.png`            | Pague uma vez. Use sempre. | Sem assinatura, sem cobrança mensal.  | 设置页会员卡                   |
 
-**重新生成方式**：
+### en
+
+| # | 文件                     | 标题（主）                     | 副标题                                      | 对应界面    |
+| - | ---------------------- | ------------------------- | ---------------------------------------- | ------- |
+| 1 | `01_criar.png`         | Codes that look like you  | Colors, dots, eyes, logo and templates.  | 创建设计页   |
+| 2 | `02_codigo_barras.png` | Reads QR and barcodes     | EAN-13, Code 128, Code 39 and more.      | 条码扫描结果  |
+| 3 | `03_risco.png`         | Check the link before you open | Flags fake domains, no HTTPS, scam words. | 风险判定页   |
+| 4 | `04_historico.png`     | Never lose a code again   | On-device history with search and filters. | 历史页     |
+| 5 | `05_privacidade.png`   | No account. No ads.       | Nothing ever leaves your phone.          | 引导隐私页   |
+| 6 | `06_preco.png`         | Pay once. Use forever.    | No subscription, no monthly bill.        | 设置页会员卡  |
+
+### 卖点排序（2026-11-28 第二轮重做）
+
+**第一版**：风险 → Wi-Fi → 历史 → 创作 → 18 类型 → 30 语言。
+**第二版**：Wi-Fi → 风险 → 创作 → 历史 → 隐私 → 价格。
+
+两版都被打回，第二次打回是对的，理由如下：
+
+1. **Wi-Fi 不是卖点**。iOS 系统相机扫到 `WIFI:` 二维码本身就会提示加入网络，用户没必要为这个装 App；而且 Wi-Fi 二维码在日常里出现频率很低，也不是任何人的搜索词。它被放进首图纯粹是因为**模拟器里它最好截、画面最自解释**——是我按"截图好不好做"排的，不是按"用户为什么下载"排的。
+2. **创建二维码是真正的差异点**。系统相机完全不能生成二维码，而「gerador de qr code」在巴西是搜索量极高的词，商店名里就带 `Gerador`。它而且是整本图里视觉最强的一张。
+3. **支持条码要单独露脸**。「código de barras」是另一个高搜索量词（商品、快递、库存标签），而且我们的结果页会明确标出 `EAN-13` / `Code 128` / `Code 39`，比只讲"能扫"具体得多。
+
+现顺序按**用户搜索时的意图**排：
+
+| 顺序 | 用户在搜什么 / 担心什么        | 卖点                          |
+| -- | ------------------- | --------------------------- |
+| 1  | 「能自己做二维码吗？」         | 自定义颜色、码点、定位眼、中心 logo、12 款模板 |
+| 2  | 「只有二维码？商品条码能扫吗？」    | EAN-13 / EAN-8 / Code 128 / Code 39 / PDF417 / Data Matrix / Aztec |
+| 3  | 「扫到坏链接会不会坑我？」       | 打开前先判风险，并说清原因               |
+| 4  | 「扫过的还找得回来吗？」        | 本地历史，带搜索、筛选、按类型分组           |
+| 5  | 「会不会偷数据、塞广告？」       | 无账号、无广告、无第三方 SDK            |
+| 6  | 「要我订阅吗？」            | 一次买断，不续费、不月付                |
+
+两条硬规则不变：
+
+- **每张图回答一个下载理由**，不是功能清单（所以「18 种类型」「30 种语言」不再单独占图）。
+- **不在商店图里展示限额与锁**：用 `LEITORQR_FORCE_PREMIUM=1` / `LEITORQR_HIDE_PRICE=1` 呈现已购状态；设置页的 `US$4.99` 是模拟器兜底价（后台真实标价 9,99 €），对不上就不显示。
+
+> Wi-Fi 一键连仍然在 App 里、也仍然写在描述的功能清单里，只是不再占商店图的坑位。
+>
+> **首图内容也一并从 Wi-Fi 换成了网址**（2026-11-28 第三轮）。原首图那张码是 `WIFI:T:WPA;S:Cafe Central;P:cafe2026;;`，等于把 Wi-Fi 卖点和一串**明文密码**印在了最显眼的位置；现在换成 `https://cafe-central.pt`，中心图标也从 Wi-Fi 变成地球。这张图里的二维码是真码——`swift scripts/decode_barcode.swift` 用 Vision 实测可解出 `https://cafe-central.pt`（含 6 张缩略图共找到 7 个码），用户拿手机对着商店图是真能扫开的。
+
+### 版式
+
+- 深蓝纯色底 `#0E1526` + 白色大标题（104px）+ 浅蓝副标题（43px），无渐变。
+- 截图**不加手机外壳**，直接做成 1020 宽的圆角卡片：外壳会额外吃掉 20% 宽高，而 App Store 搜索结果里的缩略图只有 ~120pt 宽，加了壳字就看不清。
+- 只裁掉顶部状态栏（raw y 0–200），其余 1:1 呈现，底部操作栏一定完整。
+- 标题一律写两行，版面高度固定，卡片位置不用逐张调。
+
+### 重新生成
 
 ```bash
-# 0) 用 iPhone 18 Pro（1206×2622）模拟器，并把状态栏统一成 9:41
-xcrun simctl status_bar "iPhone 18 Pro" override --time "9:41" --wifiBars 3 --cellularBars 4 --batteryState charged --batteryLevel 100
+D=$(xcrun simctl list devices booted -j | python3 -c "import json,sys;d=json.load(sys.stdin)['devices'];print([x['udid'] for v in d.values() for x in v if x['name']=='iPhone 18 Pro'][0])")
+xcrun simctl status_bar $D override --time "09:41" --batteryState charged --batteryLevel 100 --wifiBars 3 --cellularBars 4
+xcrun simctl ui $D appearance light
+export LEITORQR_DEVICE=$D LEITORQR_SHOT_DELAY=20
 
-# 1) 抓原始界面
-LEITORQR_DEVICE="iPhone 18 Pro" LEITORQR_SHOT_DELAY=13 \
-  SIMCTL_CHILD_LEITORQR_LANGUAGE=pt-BR \
-  SIMCTL_CHILD_LEITORQR_OVERLAY_SCREEN=result \
-  SIMCTL_CHILD_LEITORQR_RESULT_URL="http://192.168.0.1/banco/login" \
-  ./scripts/shot.sh s1_risk
+# 抓原始截图。LANG 换 en 时把输出名加 _en 后缀（store_shots.py 按后缀找英文原图）；
+# 每张都必须带 LEITORQR_LANGUAGE——重装后 App 内语言会回到系统语言（英文）。
+# 顺序与上表一一对应：01_criar 02_codigo_barras 03_risco 04_historico 05_privacidade 06_preco
+LANG=pt-BR; SUF=""          # 英文版：LANG=en; SUF="_en"
 
-# 2) 排版成商店图（尺寸在 store_shots.py 顶部的 W/H 改）
-python3 scripts/store_shots.py
+# 01 创作：内容是网址（不用 Wi-Fi——密码会明文露在图上，且 Wi-Fi 已不作为卖点）。
+# 自动跳第 2 步靠 AUTOSAVE_HISTORY（onAppear 里判断 styleSheet || autosaveHistory）。
+./scripts/shot.sh s_studio$SUF  --env LEITORQR_LANGUAGE=$LANG --tab create --env LEITORQR_CREATE_TYPE=website --env "LEITORQR_PREFILL_GENERATOR=https://cafe-central.pt" --env "LEITORQR_STYLE_PRESET=circle|true|1B2A4A|F7F3EA" --env LEITORQR_AUTOSAVE_HISTORY=1 --env LEITORQR_FORCE_PREMIUM=1
+
+# 02 条码：SIMULATE_FORMAT 让结果页标出 EAN-13（默认注入一律是 qrCode）。
+# 号码 7891234567895 是校验位正确、能真解的 EAN-13。
+./scripts/shot.sh s_barcode$SUF --env LEITORQR_LANGUAGE=$LANG --env LEITORQR_FAKE_CAMERA=1 --env LEITORQR_FORCE_SCANNER_UI=1 --env LEITORQR_SHEET_LARGE=1 --env LEITORQR_FORCE_PREMIUM=1 --env LEITORQR_SIMULATE_FORMAT=ean13 --env "LEITORQR_SIMULATE_SCAN=7891234567895"
+
+# 03 风险
+./scripts/shot.sh s_risk$SUF    --env LEITORQR_LANGUAGE=$LANG --env LEITORQR_FAKE_CAMERA=1 --env LEITORQR_FORCE_SCANNER_UI=1 --env LEITORQR_SHEET_LARGE=1 --env LEITORQR_FORCE_PREMIUM=1 --env "LEITORQR_SIMULATE_SCAN=http://192.168.0.1/banco/login"
+
+xcrun simctl uninstall $D com.mg.localicard   # 历史种子只在库为空时写入，不卸载就只有上一张的扫码记录
+./scripts/shot.sh s_history$SUF --env LEITORQR_LANGUAGE=$LANG --tab history --env LEITORQR_SEED_HISTORY=1 --env LEITORQR_SEED_HISTORY_COUNT=6 --env LEITORQR_FORCE_PREMIUM=1
+./scripts/shot.sh s_privacy$SUF --env LEITORQR_LANGUAGE=$LANG --env LEITORQR_ONBOARDING=1 --env LEITORQR_ONBOARDING_PAGE=2
+./scripts/shot.sh s_price$SUF   --env LEITORQR_LANGUAGE=$LANG --tab settings --env LEITORQR_HIDE_PRICE=1
+
+# 排版（两个语言一起出：python3 scripts/store_shots.py；只出英文：... en）
+python3 scripts/store_shots.py && rm -rf store/screenshots && mkdir -p store/screenshots \
+  && cp -R .build/store/pt-BR .build/store/en store/screenshots/
 ```
 
 ---
